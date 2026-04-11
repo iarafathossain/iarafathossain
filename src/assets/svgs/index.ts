@@ -1,0 +1,17 @@
+export { default as BootstrapIcon } from "./bootstrap-icon.svg";
+export { default as CssIcon } from "./css-icon.svg";
+export { default as FigmaIcon } from "./figma-icon.svg";
+export { default as GithubIcon } from "./github-icon.svg";
+export { default as HtmlIcon } from "./html-icon.svg";
+export { default as JavascriptIcon } from "./javascript-icon.svg";
+export { default as LinkedinIcon } from "./linkedin-icon.svg";
+export { default as MongodbIcon } from "./mongodb-icon.svg";
+export { default as NextJSIcon } from "./next-js-icon.svg";
+export { default as NodeJSIcon } from "./node-js-icon.svg";
+export { default as PgsqlIcon } from "./pgsql-icon.svg";
+export { default as PostmanIcon } from "./postman-icon.svg";
+export { default as PrismaIcon } from "./prisma-icon.svg";
+export { default as ReactIcon } from "./react-icon.svg";
+export { default as TailwindcssIcon } from "./tailwindcss-icon.svg";
+export { default as TypescriptIcon } from "./typescript-icon.svg";
+export { default as VsCodeIcon } from "./vs-code-icon.svg";

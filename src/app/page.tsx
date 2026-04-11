@@ -1,6 +1,10 @@
 "use client";
 
+import EducationSection from "@/components/education/education-section";
 import { HeroSection } from "@/components/hero/hero-section";
+import ProjectsSection from "@/components/project/project-section";
+import SkillsSection from "@/components/skill/skill-section";
+import TestimonialsRedesign from "@/components/testimonials/testimonial-section";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
@@ -43,6 +47,14 @@ const HomePage = () => {
     <main>
       {/* Hero Section */}
       <HeroSection />
+      {/* Skills Section */}
+      <SkillsSection />
+      {/* Projects Section */}
+      <ProjectsSection />
+      {/* Testimonials Section */}
+      <TestimonialsRedesign />
+      {/* Education Section */}
+      <EducationSection />
     </main>
   );
 };

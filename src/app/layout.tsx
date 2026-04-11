@@ -1,4 +1,6 @@
+// import Navbar from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -35,7 +37,13 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          {children}
+          <TooltipProvider>
+            {/* <header>
+              <Navbar />
+            </header> */}
+            <main>{children}</main>
+            <footer>Footer</footer>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
