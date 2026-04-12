@@ -16,7 +16,7 @@ export default function GlowButton({
   href,
   children,
   variant = "default",
-  accent = "#6366f1",
+  accent = "var(--primary)",
   compact = false,
 }: GlowButtonProps) {
   return (
@@ -30,7 +30,7 @@ export default function GlowButton({
       onMouseEnter={(e) => {
         if (variant === "default") {
           (e.currentTarget as HTMLElement).style.boxShadow =
-            `0 0 18px 0 ${accent}50`;
+            `0 0 18px 0 color-mix(in oklch, ${accent} 50%, transparent)`;
         }
       }}
       onMouseLeave={(e) => {
@@ -58,7 +58,9 @@ export default function GlowButton({
           }`}
         style={
           variant === "default"
-            ? { background: `linear-gradient(135deg, ${accent}, ${accent}cc)` }
+            ? {
+                background: `linear-gradient(135deg, ${accent}, color-mix(in oklch, ${accent} 80%, transparent))`,
+              }
             : {}
         }
       >

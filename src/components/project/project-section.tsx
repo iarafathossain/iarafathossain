@@ -85,7 +85,7 @@ export default function ProjectsSection() {
             className="relative rounded-2xl border border-border/50 bg-card/40 backdrop-blur-sm p-6 sm:p-8 xl:p-10 overflow-hidden"
             style={{
               boxShadow:
-                "inset 0 1px 0 rgba(255,255,255,0.04), 0 2px 60px 0 rgba(0,0,0,0.1)",
+                "inset 0 1px 0 color-mix(in oklch, var(--primary) 5%, transparent), 0 2px 60px 0 color-mix(in oklch, var(--primary) 5%, transparent)",
             }}
           >
             <div

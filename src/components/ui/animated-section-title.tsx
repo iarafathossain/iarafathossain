@@ -84,7 +84,7 @@ export function AnimatedSectionTitle({
           className="pointer-events-none absolute inset-0 bg-clip-text text-transparent"
           style={{
             backgroundImage:
-              "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 34%, color-mix(in oklab, white 85%, var(--primary) 15%) 50%, rgba(255,255,255,0.06) 66%, transparent 100%)",
+              "linear-gradient(90deg, transparent 0%, color-mix(in oklab, var(--foreground) 6%, transparent) 34%, color-mix(in oklab, var(--foreground) 85%, var(--primary) 15%) 50%, color-mix(in oklab, var(--foreground) 6%, transparent) 66%, transparent 100%)",
             backgroundSize: "220% 100%",
             backgroundRepeat: "no-repeat",
           }}

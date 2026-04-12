@@ -26,9 +26,9 @@ export default function HeroProject({ project }: { project: Project }) {
         <div>
           <div className="flex items-center gap-2 mb-3">
             <Badge
-              className="text-[10px] font-bold tracking-[0.15em] uppercase px-2.5 py-1 rounded-md border-0"
+              className="text-xs font-bold tracking-[0.15em] uppercase px-2.5 py-1 rounded-md border-0"
               style={{
-                background: project.accentColor + "20",
+                background: `color-mix(in oklch, ${project.accentColor} 12%, transparent)`,
                 color: project.accentColor,
               }}
             >
@@ -36,7 +36,7 @@ export default function HeroProject({ project }: { project: Project }) {
             </Badge>
             <Badge
               variant="outline"
-              className="text-[10px] font-semibold tracking-[0.12em] uppercase px-2.5 py-1 rounded-md border-border text-muted-foreground"
+              className="text-xs font-semibold tracking-[0.12em] uppercase px-2.5 py-1 rounded-md border-border text-muted-foreground"
             >
               Hero Project
             </Badge>
@@ -45,7 +45,6 @@ export default function HeroProject({ project }: { project: Project }) {
           <h3
             className="text-3xl xl:text-4xl font-black tracking-tight text-foreground leading-[1.1]"
             style={{
-              fontFamily: "'DM Mono', 'Fira Code', monospace",
               letterSpacing: "-0.03em",
             }}
           >
@@ -59,7 +58,7 @@ export default function HeroProject({ project }: { project: Project }) {
 
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-1.5">
-            <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+            <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
               <Layers className="w-3 h-3" />
               Frontend
             </div>
@@ -70,7 +69,7 @@ export default function HeroProject({ project }: { project: Project }) {
             </div>
           </div>
           <div className="flex flex-col gap-1.5">
-            <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+            <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
               <Server className="w-3 h-3" />
               Backend
             </div>
@@ -85,7 +84,7 @@ export default function HeroProject({ project }: { project: Project }) {
         <div className="h-px bg-border/60" />
 
         <div className="flex flex-wrap items-center gap-2.5">
-          <GlowButton href={project.liveUrl} accent={project.accentColor}>
+          <GlowButton href={project.liveUrl}>
             <ExternalLink className="w-3.5 h-3.5" />
             Live Site
           </GlowButton>
@@ -120,8 +119,8 @@ export default function HeroProject({ project }: { project: Project }) {
           <span
             className="flex items-center justify-center w-8 h-8 rounded-lg transition-all duration-200 group-hover:scale-110"
             style={{
-              background: project.accentColor + "20",
-              border: `1px solid ${project.accentColor}30`,
+              background: `color-mix(in oklch, ${project.accentColor} 12%, transparent)`,
+              border: `1px solid color-mix(in oklch, ${project.accentColor} 18%, transparent)`,
             }}
           >
             <BookOpen
@@ -136,7 +135,7 @@ export default function HeroProject({ project }: { project: Project }) {
             >
               Read the Technical Deep Dive
             </span>
-            <span className="text-[10px] text-muted-foreground">
+            <span className="text-xs text-muted-foreground">
               Architecture · Decisions · Challenges
             </span>
           </span>

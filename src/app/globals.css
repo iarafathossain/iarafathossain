@@ -7,9 +7,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+
+  /* This makes Inter the default font for everything (subtitles, desc, etc.) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  /* --font-heading: var(--font-satoshi-bold-italic), ui-sans-serif, system-ui; */
+  --font-heading: var(--font-milker), ui-sans-serif, system-ui;
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+
   /* Shadcn standard mappings */
   --color-ring: var(--ring);
   --color-input: var(--input);
@@ -68,6 +72,13 @@
   --border: oklch(0.9 0 0);
   --input: oklch(0.9 0 0);
   --ring: oklch(0.72 0.17 50); /* Matches Primary */
+  --window-control-close: #ff5f57;
+  --window-control-warn: #febc2e;
+  --window-control-ok: #28c840;
+  --brand-freelancer: #29b2fe;
+  --brand-freelancer-foreground: #ffffff;
+  --brand-postman-foreground: #ffffff;
+  --mask-solid: #000000;
   --radius: 0.625rem;
 }
 
@@ -108,6 +119,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }

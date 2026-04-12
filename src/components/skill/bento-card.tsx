@@ -18,7 +18,7 @@ const BentoCard = ({ category }: { category: IBentoCategory }) => (
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <CardHeader className="pb-3 pt-5 px-5">
-        <CardTitle className="flex items-center gap-2.5 text-lg font-semibold text-foreground">
+        <CardTitle className="flex items-center gap-2.5 text-lg font-semibold text-foreground font-sans">
           <span className="p-1.5 rounded-md text-primary bg-primary/10">
             {category.icon}
           </span>

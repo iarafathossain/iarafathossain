@@ -24,9 +24,18 @@ function BrowserChrome({
     <div className="rounded-xl overflow-hidden border border-border/60 shadow-2xl bg-background flex flex-col">
       <div className="flex items-center gap-3 px-4 py-2.5 bg-muted/50 border-b border-border/60 shrink-0">
         <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
+          <span
+            className="w-2.5 h-2.5 rounded-full"
+            style={{ background: "var(--window-control-close)" }}
+          />
+          <span
+            className="w-2.5 h-2.5 rounded-full"
+            style={{ background: "var(--window-control-warn)" }}
+          />
+          <span
+            className="w-2.5 h-2.5 rounded-full"
+            style={{ background: "var(--window-control-ok)" }}
+          />
         </div>
         <div className="flex-1 flex items-center justify-center text-[10px] font-mono text-muted-foreground bg-background/60 rounded-md px-3 py-1 border border-border/40 max-w-75 mx-auto truncate">
           <span
@@ -192,7 +201,7 @@ export default function ProjectMediaDisplay({
                       fill:
                         i === currentIndex
                           ? project.accentColor
-                          : "rgba(150,150,150,0.5)",
+                          : "color-mix(in oklch, var(--muted-foreground) 50%, transparent)",
                       stroke: "none",
                     }}
                   />

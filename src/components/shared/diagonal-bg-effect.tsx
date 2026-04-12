@@ -18,9 +18,9 @@ const DiagonalBGEffect = () => (
         transparent 24px
       )`,
         maskImage:
-          "radial-gradient(circle at center, black 30%, transparent 90%)",
+          "radial-gradient(circle at center, var(--mask-solid) 30%, transparent 90%)",
         WebkitMaskImage:
-          "radial-gradient(circle at center, black 30%, transparent 90%)",
+          "radial-gradient(circle at center, var(--mask-solid) 30%, transparent 90%)",
       }}
     />
   </div>

@@ -14,7 +14,7 @@ const SectionHeading = forwardRef<HTMLDivElement, SectionHeadingProps>(
       <div ref={ref} className={`mb-16 text-center ${className}`}>
         <SectionLabel>{label}</SectionLabel>
 
-        <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mt-2">
+        <h2 className="font-heading text-4xl sm:text-5xl font-bold tracking-wider italic text-foreground mt-2">
           {title}
         </h2>
 

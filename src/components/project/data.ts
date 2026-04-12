@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     githubUrlFrontend: "https://github.com/example/nexus-crm-frontend",
     githubUrlBackend: "https://github.com/example/nexus-crm-backend",
     deepDiveUrl: "/blog/nexus-crm-deep-dive",
-    accentColor: "#6366f1",
+    accentColor: "var(--primary)",
   },
   {
     id: "forge-api",
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
     githubUrlFrontend: "https://github.com/example/forge-api-frontend",
     githubUrlBackend: "https://github.com/example/forge-api-backend",
     deepDiveUrl: "/blog/forge-api-deep-dive",
-    accentColor: "#10b981",
+    accentColor: "var(--primary)",
   },
   {
     id: "atlas-finance",
@@ -100,6 +100,6 @@ export const PROJECTS: Project[] = [
     githubUrlFrontend: "https://github.com/example/atlas-finance-frontend",
     githubUrlBackend: "https://github.com/example/atlas-finance-backend",
     deepDiveUrl: "/blog/atlas-finance-deep-dive",
-    accentColor: "#f59e0b",
+    accentColor: "var(--primary)",
   },
 ];

@@ -27,7 +27,7 @@ export default function SecondaryProjectCard({
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLElement).style.setProperty(
           "--card-glow",
-          project.accentColor + "18",
+          `color-mix(in oklch, ${project.accentColor} 10%, transparent)`,
         );
       }}
       onMouseLeave={(e) => {
@@ -41,17 +41,20 @@ export default function SecondaryProjectCard({
         className="h-full bg-card/80 border-border/50 backdrop-blur-md overflow-hidden transition-all duration-300 hover:border-border/80 flex flex-col group"
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLElement).style.boxShadow =
-            `0 8px 40px 0 ${project.accentColor}14`;
+            `0 8px 40px 0 color-mix(in oklch, ${project.accentColor} 8%, transparent)`;
         }}
         onMouseLeave={(e) => {
           (e.currentTarget as HTMLElement).style.boxShadow = "";
         }}
-        style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.03)" }}
+        style={{
+          boxShadow:
+            "inset 0 1px 0 color-mix(in oklch, var(--foreground) 3%, transparent)",
+        }}
       >
         <div
           className="h-0.5 w-0 group-hover:w-full transition-all duration-500 ease-out"
           style={{
-            background: `linear-gradient(90deg, transparent, ${project.accentColor}90, transparent)`,
+            background: `linear-gradient(90deg, transparent, color-mix(in oklch, ${project.accentColor} 56%, transparent), transparent)`,
           }}
         />
 
@@ -67,18 +70,17 @@ export default function SecondaryProjectCard({
           <div className="flex items-start justify-between gap-2">
             <div>
               <Badge
-                className="text-[9px] font-bold tracking-[0.15em] uppercase px-2 py-0.5 rounded mb-2 border-0"
+                className="text-xs font-bold tracking-[0.15em] uppercase px-2 py-0.5 rounded mb-2 border-0"
                 style={{
-                  background: project.accentColor + "18",
+                  background: `color-mix(in oklch, ${project.accentColor} 10%, transparent)`,
                   color: project.accentColor,
                 }}
               >
                 {project.type}
               </Badge>
               <h3
-                className="text-lg font-black tracking-tight text-foreground leading-tight"
+                className="text-lg font-black tracking-tight text-foreground leading-normal"
                 style={{
-                  fontFamily: "'DM Mono', 'Fira Code', monospace",
                   letterSpacing: "-0.02em",
                 }}
               >
@@ -87,7 +89,7 @@ export default function SecondaryProjectCard({
             </div>
           </div>
 
-          <p className="text-muted-foreground text-xs leading-relaxed line-clamp-3">
+          <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
             {project.description}
           </p>
 
@@ -138,15 +140,17 @@ export default function SecondaryProjectCard({
               rel="noopener noreferrer"
               whileHover={{ x: 2 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="group ml-auto flex items-center gap-1 text-xs font-semibold transition-colors duration-150"
-              style={{ color: project.accentColor + "cc" }}
+              className="group ml-auto flex items-center gap-1 text-sm font-semibold transition-colors duration-150"
+              style={{
+                color: `color-mix(in oklch, ${project.accentColor} 80%, transparent)`,
+              }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.color =
                   project.accentColor;
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLElement).style.color =
-                  project.accentColor + "cc";
+                  `color-mix(in oklch, ${project.accentColor} 80%, transparent)`;
               }}
             >
               <BookOpen className="w-3 h-3" />

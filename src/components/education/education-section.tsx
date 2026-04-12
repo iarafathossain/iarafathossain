@@ -64,7 +64,7 @@ export default function EducationSection() {
             top: "10%",
             left: "-10%",
             background:
-              "radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 70%)",
+              "radial-gradient(circle, color-mix(in oklch, var(--primary) 12%, transparent) 0%, transparent 70%)",
             filter: "blur(60px)",
           }}
         />
@@ -76,7 +76,7 @@ export default function EducationSection() {
             bottom: "5%",
             right: "-8%",
             background:
-              "radial-gradient(circle, rgba(168,85,247,0.12) 0%, transparent 70%)",
+              "radial-gradient(circle, color-mix(in oklch, var(--secondary-foreground) 12%, transparent) 0%, transparent 70%)",
             filter: "blur(60px)",
           }}
         />
