@@ -2,14 +2,23 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowUpRight, BookOpen, Code as Github, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+import {
+  ArrowUpRight,
+  BookOpen,
+  ExternalLink,
+  Code as Github,
+} from "lucide-react";
 import GlowButton from "./glow-button";
 import { Project } from "./interface";
 import ProjectMediaDisplay from "./project-media-display";
 import TechPill from "./tech-pill";
 
-export default function SecondaryProjectCard({ project }: { project: Project }) {
+export default function SecondaryProjectCard({
+  project,
+}: {
+  project: Project;
+}) {
   return (
     <motion.div
       className="project-card h-full"
@@ -29,7 +38,7 @@ export default function SecondaryProjectCard({ project }: { project: Project }) 
       }}
     >
       <Card
-        className="h-full bg-zinc-900/80 border-zinc-800/50 backdrop-blur-md overflow-hidden transition-all duration-300 hover:border-zinc-700/60 flex flex-col group"
+        className="h-full bg-card/80 border-border/50 backdrop-blur-md overflow-hidden transition-all duration-300 hover:border-border/80 flex flex-col group"
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLElement).style.boxShadow =
             `0 8px 40px 0 ${project.accentColor}14`;
@@ -67,7 +76,7 @@ export default function SecondaryProjectCard({ project }: { project: Project }) 
                 {project.type}
               </Badge>
               <h3
-                className="text-lg font-black tracking-tight text-zinc-100 leading-tight"
+                className="text-lg font-black tracking-tight text-foreground leading-tight"
                 style={{
                   fontFamily: "'DM Mono', 'Fira Code', monospace",
                   letterSpacing: "-0.02em",
@@ -78,7 +87,7 @@ export default function SecondaryProjectCard({ project }: { project: Project }) 
             </div>
           </div>
 
-          <p className="text-zinc-500 text-xs leading-relaxed line-clamp-3">
+          <p className="text-muted-foreground text-xs leading-relaxed line-clamp-3">
             {project.description}
           </p>
 
@@ -93,7 +102,7 @@ export default function SecondaryProjectCard({ project }: { project: Project }) 
 
           <div className="flex-1" />
 
-          <div className="h-px bg-zinc-800/50" />
+          <div className="h-px bg-border/50" />
 
           <div className="flex flex-wrap items-center gap-2">
             <GlowButton

@@ -1,15 +1,15 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   BookOpen,
-  Code as Github,
   ExternalLink,
+  Code as Github,
   Layers,
   Server,
 } from "lucide-react";
-import { motion } from "framer-motion";
 import GlowButton from "./glow-button";
 import { Project } from "./interface";
 import ProjectMediaDisplay from "./project-media-display";
@@ -36,14 +36,14 @@ export default function HeroProject({ project }: { project: Project }) {
             </Badge>
             <Badge
               variant="outline"
-              className="text-[10px] font-semibold tracking-[0.12em] uppercase px-2.5 py-1 rounded-md border-zinc-700/50 text-zinc-500"
+              className="text-[10px] font-semibold tracking-[0.12em] uppercase px-2.5 py-1 rounded-md border-border text-muted-foreground"
             >
               Hero Project
             </Badge>
           </div>
 
           <h3
-            className="text-3xl xl:text-4xl font-black tracking-tight text-zinc-100 leading-[1.1]"
+            className="text-3xl xl:text-4xl font-black tracking-tight text-foreground leading-[1.1]"
             style={{
               fontFamily: "'DM Mono', 'Fira Code', monospace",
               letterSpacing: "-0.03em",
@@ -53,13 +53,13 @@ export default function HeroProject({ project }: { project: Project }) {
           </h3>
         </div>
 
-        <p className="text-zinc-400 text-sm leading-relaxed max-w-lg">
+        <p className="text-muted-foreground text-sm leading-relaxed max-w-lg">
           {project.description}
         </p>
 
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-1.5">
-            <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-zinc-600">
+            <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
               <Layers className="w-3 h-3" />
               Frontend
             </div>
@@ -70,7 +70,7 @@ export default function HeroProject({ project }: { project: Project }) {
             </div>
           </div>
           <div className="flex flex-col gap-1.5">
-            <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-zinc-600">
+            <div className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
               <Server className="w-3 h-3" />
               Backend
             </div>
@@ -82,7 +82,7 @@ export default function HeroProject({ project }: { project: Project }) {
           </div>
         </div>
 
-        <div className="h-px bg-zinc-800/60" />
+        <div className="h-px bg-border/60" />
 
         <div className="flex flex-wrap items-center gap-2.5">
           <GlowButton href={project.liveUrl} accent={project.accentColor}>
@@ -136,7 +136,7 @@ export default function HeroProject({ project }: { project: Project }) {
             >
               Read the Technical Deep Dive
             </span>
-            <span className="text-[10px] text-zinc-600">
+            <span className="text-[10px] text-muted-foreground">
               Architecture · Decisions · Challenges
             </span>
           </span>

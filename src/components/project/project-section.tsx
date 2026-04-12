@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import SectionHeading from "../section-heading";
+import DiagonalBGEffect from "../shared/diagonal-bg-effect";
 import { PROJECTS } from "./data";
 import HeroProject from "./hero-project";
 import SecondaryProjectCard from "./secondary-project-card";
@@ -67,26 +68,13 @@ export default function ProjectsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-[#0a0a0a] py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <div
-        className="pointer-events-none absolute inset-0 overflow-hidden"
-        aria-hidden="true"
-      >
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-225 h-125 rounded-full opacity-[0.03] blur-[140px] bg-indigo-500" />
-        <div className="absolute bottom-1/3 right-0 w-125 h-100 rounded-full opacity-[0.025] blur-[120px] bg-emerald-500" />
-        <div
-          className="absolute inset-0 opacity-[0.012]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)",
-            backgroundSize: "72px 72px",
-          }}
-        />
-      </div>
+      <DiagonalBGEffect />
 
       <div className="relative max-w-6xl mx-auto">
         <SectionHeading
+          ref={headingRef}
           label="Selected Work"
           title="Featured Projects"
           description="End-to-end products shipped with care — from schema design to deployment pipeline."
@@ -94,10 +82,10 @@ export default function ProjectsSection() {
 
         <div ref={heroRef} className="mb-12">
           <div
-            className="relative rounded-2xl border border-zinc-800/50 bg-zinc-900/40 backdrop-blur-sm p-6 sm:p-8 xl:p-10 overflow-hidden"
+            className="relative rounded-2xl border border-border/50 bg-card/40 backdrop-blur-sm p-6 sm:p-8 xl:p-10 overflow-hidden"
             style={{
               boxShadow:
-                "inset 0 1px 0 rgba(255,255,255,0.04), 0 2px 60px 0 rgba(0,0,0,0.5)",
+                "inset 0 1px 0 rgba(255,255,255,0.04), 0 2px 60px 0 rgba(0,0,0,0.1)",
             }}
           >
             <div
@@ -114,11 +102,11 @@ export default function ProjectsSection() {
         </div>
 
         <div className="relative my-10 flex items-center gap-4">
-          <div className="flex-1 h-px bg-linear-to-r from-transparent via-zinc-800 to-transparent" />
-          <span className="text-zinc-500 text-sm tracking-widest uppercase font-mono shrink-0">
+          <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-transparent" />
+          <span className="text-muted-foreground text-sm tracking-widest uppercase font-mono shrink-0">
             More Projects
           </span>
-          <div className="flex-1 h-px bg-linear-to-r from-transparent via-zinc-800 to-transparent" />
+          <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-transparent" />
         </div>
 
         <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-5">

@@ -21,14 +21,14 @@ function BrowserChrome({
   accent: string;
 }) {
   return (
-    <div className="rounded-xl overflow-hidden border border-zinc-800/60 shadow-2xl bg-zinc-950 flex flex-col">
-      <div className="flex items-center gap-3 px-4 py-2.5 bg-zinc-900 border-b border-zinc-800/60 shrink-0">
+    <div className="rounded-xl overflow-hidden border border-border/60 shadow-2xl bg-background flex flex-col">
+      <div className="flex items-center gap-3 px-4 py-2.5 bg-muted/50 border-b border-border/60 shrink-0">
         <div className="flex items-center gap-1.5">
           <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
           <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
           <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
         </div>
-        <div className="flex-1 flex items-center justify-center text-[10px] font-mono text-zinc-500 bg-zinc-950/60 rounded-md px-3 py-1 border border-zinc-800/40 max-w-75 mx-auto truncate">
+        <div className="flex-1 flex items-center justify-center text-[10px] font-mono text-muted-foreground bg-background/60 rounded-md px-3 py-1 border border-border/40 max-w-75 mx-auto truncate">
           <span
             className="w-1.5 h-1.5 rounded-full mr-1.5 shrink-0"
             style={{ background: accent }}
@@ -97,18 +97,18 @@ export default function ProjectMediaDisplay({
       className="w-full flex flex-col gap-3"
     >
       <TabsList
-        className={`self-start flex gap-1 bg-zinc-900/70 border border-zinc-800/50 backdrop-blur-md p-1 rounded-xl ${compact ? "h-8" : "h-9"}`}
+        className={`self-start flex gap-1 bg-muted/70 border border-border/50 backdrop-blur-md p-1 rounded-xl ${compact ? "h-8" : "h-9"}`}
       >
         <TabsTrigger
           value="video"
-          className={`flex items-center gap-1.5 rounded-lg font-medium text-zinc-500 data-[state=active]:bg-zinc-800 data-[state=active]:text-zinc-100 hover:text-zinc-300 transition-all duration-200 ${compact ? "text-[10px] px-2.5 py-1" : "text-xs px-3 py-1.5"}`}
+          className={`flex items-center gap-1.5 rounded-lg font-medium text-muted-foreground data-[state=active]:bg-background data-[state=active]:text-foreground hover:text-foreground/80 transition-all duration-200 ${compact ? "text-[10px] px-2.5 py-1" : "text-xs px-3 py-1.5"}`}
         >
           <Play className={compact ? "w-2.5 h-2.5" : "w-3 h-3"} />
           Demo Video
         </TabsTrigger>
         <TabsTrigger
           value="showcase"
-          className={`flex items-center gap-1.5 rounded-lg font-medium text-zinc-500 data-[state=active]:bg-zinc-800 data-[state=active]:text-zinc-100 hover:text-zinc-300 transition-all duration-200 ${compact ? "text-[10px] px-2.5 py-1" : "text-xs px-3 py-1.5"}`}
+          className={`flex items-center gap-1.5 rounded-lg font-medium text-muted-foreground data-[state=active]:bg-background data-[state=active]:text-foreground hover:text-foreground/80 transition-all duration-200 ${compact ? "text-[10px] px-2.5 py-1" : "text-xs px-3 py-1.5"}`}
         >
           <Images className={compact ? "w-2.5 h-2.5" : "w-3 h-3"} />
           Feature Showcase
@@ -121,7 +121,7 @@ export default function ProjectMediaDisplay({
           accent={project.accentColor}
         >
           <div
-            className="w-full bg-zinc-950 overflow-hidden"
+            className="w-full bg-background overflow-hidden"
             style={{ height: viewportHeight }}
           >
             <video
@@ -144,7 +144,7 @@ export default function ProjectMediaDisplay({
           accent={project.accentColor}
         >
           <div
-            className="relative w-full overflow-hidden bg-zinc-950"
+            className="relative w-full overflow-hidden bg-background"
             style={{ height: viewportHeight }}
           >
             <AnimatePresence
@@ -192,7 +192,7 @@ export default function ProjectMediaDisplay({
                       fill:
                         i === currentIndex
                           ? project.accentColor
-                          : "rgba(255,255,255,0.25)",
+                          : "rgba(150,150,150,0.5)",
                       stroke: "none",
                     }}
                   />
@@ -200,7 +200,7 @@ export default function ProjectMediaDisplay({
               ))}
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none bg-linear-to-t from-zinc-950 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none bg-linear-to-t from-background to-transparent" />
           </div>
         </BrowserChrome>
       </TabsContent>

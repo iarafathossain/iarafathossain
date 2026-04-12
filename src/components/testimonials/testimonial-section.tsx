@@ -4,8 +4,9 @@ import SectionHeading from "@/components/section-heading";
 import { motion, useInView } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Quote, Star } from "lucide-react";
+import { Heart, Star } from "lucide-react";
 import { useLayoutEffect, useRef } from "react";
+import SquareBGEffect from "../shared/square-bg-effect";
 import { testimonials } from "./data";
 import TestimonialCard from "./testimonial-card";
 
@@ -42,20 +43,21 @@ export default function TestimonialsRedesign() {
   return (
     <section
       ref={componentRef}
-      className="py-24 relative w-full flex flex-col items-center justify-center overflow-hidden bg-black"
+      className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
+      <SquareBGEffect />
       <div
         ref={backgroundRef}
         className="absolute inset-0 pointer-events-none z-0"
       >
-        <div className="absolute top-1/4 left-1/4 w-150 h-150 bg-purple-500/5 blur-[120px] rounded-full" />
-        <div className="absolute bottom-1/4 right-1/4 w-150 h-150 bg-purple-500/5 blur-[120px] rounded-full" />
+        <div className="absolute top-1/4 left-1/4 w-150 h-150 bg-primary/5 blur-[120px] rounded-full" />
+        <div className="absolute bottom-1/4 right-1/4 w-150 h-150 bg-primary/5 blur-[120px] rounded-full" />
 
-        <Quote className="bg-graphic absolute top-[10%] left-[5%] w-24 h-24 text-white/3 rotate-12" />
-        <Quote className="bg-graphic absolute top-[70%] left-[8%] w-16 h-16 text-purple-500/2 -rotate-12" />
-        <Star className="bg-graphic absolute top-[30%] right-[10%] w-20 h-20 text-white/3 fill-none stroke-current" />
-        <Star className="bg-graphic absolute top-[80%] right-[5%] w-14 h-14 text-purple-500/2 fill-none stroke-current rotate-45" />
-        <Quote className="bg-graphic absolute top-[50%] left-[50%] w-32 h-32 text-white/1.5 -rotate-3" />
+        <Heart className="bg-graphic absolute top-[10%] left-[5%] w-24 h-24 text-foreground/3 rotate-12" />
+        <Heart className="bg-graphic absolute top-[70%] left-[8%] w-16 h-16 text-primary/20 -rotate-12" />
+        <Star className="bg-graphic absolute top-[30%] right-[10%] w-20 h-20 text-foreground/3 fill-none stroke-current" />
+        <Star className="bg-graphic absolute top-[80%] right-[5%] w-14 h-14 text-primary/20 fill-none stroke-current rotate-45" />
+        <Heart className="bg-graphic absolute top-[50%] left-[50%] w-32 h-32 text-foreground/15 -rotate-3" />
       </div>
 
       <div className="z-10 w-full max-w-7xl mx-auto px-6">

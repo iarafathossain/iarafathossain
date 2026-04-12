@@ -72,7 +72,6 @@ export const BENTO_CATEGORIES: IBentoCategory[] = [
   {
     title: "Frontend",
     icon: <LayoutGrid className="w-4 h-4" />,
-    accent: "#6366f1",
     skills: [
       {
         name: "JavaScript",
@@ -99,7 +98,6 @@ export const BENTO_CATEGORIES: IBentoCategory[] = [
   {
     title: "Backend & Security",
     icon: <Shield className="w-4 h-4" />,
-    accent: "#10b981",
     skills: [
       {
         name: "Node.js & Express.js",
@@ -114,7 +112,6 @@ export const BENTO_CATEGORIES: IBentoCategory[] = [
   {
     title: "Databases & Data Modeling",
     icon: <Database className="w-4 h-4" />,
-    accent: "#f59e0b",
     skills: [
       {
         name: "PostgreSQL & Prisma ORM",
@@ -128,7 +125,6 @@ export const BENTO_CATEGORIES: IBentoCategory[] = [
   {
     title: "Tools & Workflow",
     icon: <Workflow className="w-4 h-4" />,
-    accent: "#ec4899",
     skills: [
       { name: "Git & GitHub", icon: <GithubIcon className="w-4 h-4" /> },
       { name: "Postman", icon: <PostmanIcon className="w-4 h-4" /> },

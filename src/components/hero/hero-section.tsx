@@ -24,7 +24,6 @@ export const HeroSection = () => {
   useEffect(() => {
     const currentTagline = TAGLINES[taglineIndex];
 
-    // Pause briefly when a word is fully typed or fully deleted.
     if (!isDeleting && displayText === currentTagline) {
       const holdTimeout = setTimeout(() => setIsDeleting(true), 1200);
       return () => clearTimeout(holdTimeout);
@@ -44,7 +43,6 @@ export const HeroSection = () => {
         if (isDeleting) {
           return prev.slice(0, -1);
         }
-
         return currentTagline.slice(0, prev.length + 1);
       });
     }, typingSpeed);
@@ -52,7 +50,6 @@ export const HeroSection = () => {
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, taglineIndex]);
 
-  // Container variants for staggered child animation
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -70,7 +67,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center flex-col text-white font-sans selection:bg-green-600/30 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center flex-col text-foreground font-sans selection:bg-primary/30 overflow-hidden bg-background">
       <BackgroundEffects />
       <ScrollIndicator />
 
@@ -86,15 +83,15 @@ export const HeroSection = () => {
           variants={itemVariants}
           className="mb-5 relative w-full flex flex-col items-center"
         >
-          <p className="mb-4 text-[11px] sm:text-xs tracking-[0.4em] uppercase text-zinc-400">
+          <p className="mb-4 text-xs sm:text-sm tracking-[0.4em] uppercase text-muted-foreground">
             Hey, I&apos;m
           </p>
 
           <h1 className="text-5xl sm:text-6xl md:text-[8vw] lg:text-[5.75rem] font-extrabold tracking-tight leading-[0.95] z-20 text-center relative overflow-hidden">
-            <span className="bg-linear-to-r from-orange-400 via-amber-300 to-orange-200 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               arafat
             </span>{" "}
-            <span className="bg-linear-to-r from-orange-400 via-amber-300 to-orange-200 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-primary/80 to-primary/40 bg-clip-text text-transparent">
               hossain.
             </span>
           </h1>
@@ -102,11 +99,11 @@ export const HeroSection = () => {
 
         <motion.p
           variants={itemVariants}
-          className="text-lg sm:text-xl font-mono tracking-tight text-zinc-400 mb-6 text-center"
+          className="text-lg sm:text-xl font-mono tracking-tight text-muted-foreground mb-6 text-center"
         >
-          <span className="mr-2 text-zinc-500">I build</span>
-          <span className="text-emerald-400">{displayText}</span>
-          <span className="inline-block ml-1 text-emerald-300 animate-pulse">
+          <span className="mr-2">I build</span>
+          <span className="text-primary font-semibold">{displayText}</span>
+          <span className="inline-block ml-1 text-primary/80 animate-pulse">
             |
           </span>
         </motion.p>
@@ -115,13 +112,13 @@ export const HeroSection = () => {
           variants={itemVariants}
           className="mb-6 flex flex-wrap items-center justify-center gap-2"
         >
-          <span className="rounded-full border border-orange-400/40 bg-orange-500/10 px-4 py-1.5 text-sm font-semibold text-orange-300">
+          <span className="rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-md font-semibold text-secondary-foreground backdrop-blur-sm">
             Full Stack Dev
           </span>
-          <span className="rounded-full border border-cyan-400/40 bg-cyan-500/10 px-4 py-1.5 text-sm font-semibold text-cyan-300">
+          <span className="rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-md font-semibold text-secondary-foreground backdrop-blur-sm">
             Freelancer
           </span>
-          <span className="rounded-full border border-fuchsia-400/35 bg-fuchsia-500/10 px-4 py-1.5 text-sm font-semibold text-fuchsia-300">
+          <span className="rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-md font-semibold text-secondary-foreground backdrop-blur-sm">
             Tech + Business Enthusiast
           </span>
         </motion.div>
@@ -132,7 +129,7 @@ export const HeroSection = () => {
         >
           <Link
             href="#contact"
-            className="rounded-xl border border-zinc-600/70 bg-black/40 px-7 py-3 text-xl font-bold text-zinc-100 transition hover:-translate-y-0.5 hover:border-emerald-400/50 hover:text-white"
+            className="rounded-xl border border-primary/50 bg-primary/10 px-7 py-3 text-xl font-bold text-foreground transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground shadow-lg shadow-primary/5"
           >
             <span className="inline-flex items-center gap-2">
               <MessageCircle className="h-5 w-5 animate-pulse" />
@@ -143,9 +140,9 @@ export const HeroSection = () => {
 
         <motion.div
           variants={itemVariants}
-          className="mb-6 flex items-center gap-2 text-emerald-300 font-semibold"
+          className="mb-6 flex items-center gap-2 text-primary font-semibold"
         >
-          <Circle className="h-3 w-3 fill-current text-emerald-400" />
+          <Circle className="h-3 w-3 fill-current animate-pulse" />
           <span>Available for work</span>
         </motion.div>
 

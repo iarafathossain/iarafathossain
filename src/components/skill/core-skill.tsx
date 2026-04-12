@@ -20,32 +20,21 @@ const CoreSkill = ({ skill }: CoreSkillProps) => (
           whileTap={{ scale: 0.97 }}
           transition={{ type: "spring", stiffness: 400, damping: 18 }}
           className="group relative flex items-center gap-2.5 px-5 py-3 rounded-xl
-              bg-zinc-900/70 border border-zinc-800/60 backdrop-blur-md cursor-default
-              hover:border-indigo-500/50 hover:bg-zinc-800/60
-              transition-colors duration-300"
-          style={{
-            boxShadow: "0 0 0 0 transparent",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLElement).style.boxShadow =
-              "0 0 18px 0 rgba(99,102,241,0.15)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLElement).style.boxShadow =
-              "0 0 0 0 transparent";
-          }}
+              bg-card border border-border backdrop-blur-md cursor-default
+              hover:border-primary/50 hover:bg-card/80
+              transition-colors duration-300 shadow-sm"
         >
-          <span className="text-indigo-400 group-hover:text-indigo-300 transition-colors duration-200">
+          <span className="text-primary/80 group-hover:text-primary transition-colors duration-200">
             {skill.icon}
           </span>
-          <span className="text-sm font-semibold text-zinc-200 group-hover:text-white transition-colors duration-200 whitespace-nowrap">
+          <span className="text-sm font-medium text-foreground transition-colors duration-200 whitespace-nowrap">
             {skill.name}
           </span>
         </motion.div>
       </TooltipTrigger>
       <TooltipContent
         side="bottom"
-        className="bg-zinc-900 border-zinc-700/60 text-zinc-300 text-xs"
+        className="bg-popover border-border text-popover-foreground text-xs font-medium"
       >
         {skill.description}
       </TooltipContent>

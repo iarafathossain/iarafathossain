@@ -4,10 +4,10 @@ import { Badge } from "../ui/badge";
 import { EXPLORING_GROUPS } from "./data";
 
 const SkillExploring = forwardRef<HTMLDivElement>(({}, ref) => (
-  <div ref={ref} className="opacity-70">
+  <div ref={ref} className="opacity-90">
     <div className="flex items-center justify-center gap-2 mb-6">
       <span className="text-base">🌱</span>
-      <span className="text-sm font-semibold tracking-[0.2em] uppercase text-zinc-500">
+      <span className="text-lg font-semibold tracking-widest uppercase text-muted-foreground">
         Currently Exploring
       </span>
     </div>
@@ -18,9 +18,9 @@ const SkillExploring = forwardRef<HTMLDivElement>(({}, ref) => (
           key={group.groupTitle}
           className="flex flex-col items-center gap-3"
         >
-          <div className="flex items-center gap-1.5 text-zinc-500">
+          <div className="flex items-center gap-1.5 text-muted-foreground">
             {group.icon}
-            <span className="text-sm font-medium tracking-wide text-zinc-500">
+            <span className="text-lg font-medium tracking-wide">
               {group.groupTitle}
             </span>
           </div>
@@ -37,12 +37,9 @@ const SkillExploring = forwardRef<HTMLDivElement>(({}, ref) => (
               >
                 <Badge
                   variant="outline"
-                  className="flex items-center gap-1.5 px-3 py-1 rounded-full
-                          text-sm font-medium text-zinc-500 border-zinc-800/60
-                          bg-transparent hover:text-zinc-400 hover:border-zinc-700
-                          transition-all duration-200 cursor-default"
+                  className="flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium text-muted-foreground border-border bg-transparent hover:text-foreground hover:border-primary/50 transition-all duration-200 cursor-default"
                 >
-                  <span className="text-zinc-600">{skill.icon}</span>
+                  <span className="opacity-70">{skill.icon}</span>
                   {skill.name}
                 </Badge>
               </motion.div>

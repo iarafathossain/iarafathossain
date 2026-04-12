@@ -21,7 +21,7 @@ export const BackgroundEffects = () => {
 
       gsap.to(el, {
         duration,
-        ease: "sine.inOut", // Smoother drifting than 'none'
+        ease: "sine.inOut",
         repeat: -1,
         delay,
         x: yStart,
@@ -30,71 +30,64 @@ export const BackgroundEffects = () => {
       });
     });
 
-    // Slow radial gradient shift
+    // Slow radial glow shift
     const bgGlow = containerRef.current.querySelector(".bg-glow");
-    gsap.fromTo(
-      bgGlow,
-      { opacity: 0.3 },
-      {
-        opacity: 0.5,
-        duration: 8,
-        ease: "sine.inOut",
-        yoyo: true,
-        repeat: -1,
-      },
-    );
+    if (bgGlow) {
+      gsap.fromTo(
+        bgGlow,
+        { opacity: 0.4 },
+        {
+          opacity: 0.7,
+          duration: 8,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: -1,
+        },
+      );
+    }
   }, []);
 
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 -z-10 overflow-hidden pointer-events-none"
+      className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-background"
     >
-      {/* Dark gradient base */}
-      <div className="absolute inset-0 bg-black" />
+      {/* Central glow using primary theme color */}
+      <div className="bg-glow absolute top-1/4 left-1/2 -translate-x-1/2 w-150 h-150 rounded-full bg-primary/10 blur-[150px]" />
 
-      {/* Central multi-color glow adjusted for the image reference */}
-      <div
-        className="bg-glow absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(circle at center 30%, rgba(16, 185, 129, 0.15) 0%, rgba(6, 182, 212, 0.1) 25%, rgba(0, 0, 0, 1) 60%)",
-        }}
-      />
-
-      {/* Floating Keywords - Larger sizes, white with low opacity, and sans font */}
+      {/* Floating Keywords */}
       <span
-        className="float-element text-3xl font-bold text-white/5 absolute"
+        className="float-element text-3xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
         style={{ top: "15%", left: "10%" }}
       >
         JavaScript
       </span>
       <span
-        className="float-element text-4xl font-bold text-white/5 absolute"
+        className="float-element text-4xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
         style={{ top: "65%", left: "15%" }}
       >
         TypeScript
       </span>
       <span
-        className="float-element text-5xl font-bold text-white/5 absolute"
+        className="float-element text-5xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
         style={{ top: "25%", right: "20%" }}
       >
         React
       </span>
       <span
-        className="float-element text-3xl font-bold text-white/5 absolute"
+        className="float-element text-3xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
         style={{ top: "50%", right: "10%" }}
       >
         Next.js
       </span>
       <span
-        className="float-element text-4xl font-bold text-white/5 absolute"
+        className="float-element text-4xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
         style={{ top: "80%", right: "25%" }}
       >
         React
       </span>
       <span
-        className="float-element text-2xl font-bold text-white/5 absolute"
+        className="float-element text-2xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
         style={{ top: "35%", left: "25%" }}
       >
         Next.js

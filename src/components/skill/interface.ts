@@ -6,7 +6,6 @@ export interface ISkill {
 export interface IBentoCategory {
   title: string;
   icon: React.ReactNode;
-  accent: string;
   skills: ISkill[];
   colSpan?: "single" | "double";
 }

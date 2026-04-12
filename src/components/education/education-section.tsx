@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import SectionLabel from "../section-label";
+import DiagonalBGEffect from "../shared/diagonal-bg-effect";
 import AcademicCard from "./academic-card";
 import CertificationCard from "./certification-card";
 import { CERTIFICATIONS, CERTIFICATIONS_TITLE } from "./data";
-import SectionLabel from "./section-label";
 
 export default function EducationSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -51,8 +52,9 @@ export default function EducationSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
+      <DiagonalBGEffect />
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute rounded-full"

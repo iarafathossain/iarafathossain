@@ -1,5 +1,5 @@
 import { forwardRef, ReactNode } from "react";
-import SectionLabel from "./skill/section-label";
+import SectionLabel from "./section-label";
 
 interface SectionHeadingProps {
   label: string;
@@ -14,17 +14,11 @@ const SectionHeading = forwardRef<HTMLDivElement, SectionHeadingProps>(
       <div ref={ref} className={`mb-16 text-center ${className}`}>
         <SectionLabel>{label}</SectionLabel>
 
-        <h2
-          className="text-4xl sm:text-5xl font-black tracking-tight text-zinc-100 mt-2"
-          style={{
-            fontFamily: "'DM Mono', 'Fira Code', 'Courier New', monospace",
-            letterSpacing: "-0.03em",
-          }}
-        >
+        <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mt-2">
           {title}
         </h2>
 
-        <p className="mt-3 text-zinc-500 text-sm max-w-md mx-auto leading-relaxed">
+        <p className="mt-3 text-muted-foreground text-base max-w-md mx-auto leading-relaxed">
           {description}
         </p>
       </div>

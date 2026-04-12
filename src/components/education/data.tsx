@@ -19,7 +19,7 @@ export const ACADEMIC_EDUCATION: IAcademicEducation = {
     "Database architecture and information modeling",
     "Practical full-stack development workflow",
   ],
-  icon: <GraduationCap className="w-9 h-9 text-orange-400/80" />,
+  icon: <GraduationCap className="w-9 h-9 text-primary" />,
 };
 
 export const CERTIFICATIONS: ICertification[] = [
@@ -27,7 +27,7 @@ export const CERTIFICATIONS: ICertification[] = [
     id: "cert-1",
     title: "Advanced JavaScript",
     platform: "Scrimba",
-    platformColor: "#6B46C1",
+    platformColor: "var(--primary)",
     completionDate: "December 2025",
     imageUrl: AdvancedJavascriptCertificate,
     summary:
@@ -38,7 +38,7 @@ export const CERTIFICATIONS: ICertification[] = [
     id: "cert-2",
     title: "AI Engineering Path",
     platform: "Scrimba",
-    platformColor: "#0056D2",
+    platformColor: "var(--primary)",
     completionDate: "2025",
     imageUrl: AiEngineeringPathCertificate,
     summary:
@@ -49,7 +49,7 @@ export const CERTIFICATIONS: ICertification[] = [
     id: "cert-3",
     title: "Programming with JavaScript",
     platform: "Coursera (Meta)",
-    platformColor: "#10b981",
+    platformColor: "var(--primary)",
     completionDate: "2024",
     imageUrl: ProgrammingWithJsByMetaCertificate,
     summary:
@@ -64,7 +64,7 @@ export const CERTIFICATIONS: ICertification[] = [
     id: "cert-4",
     title: "Reactive Accelerator",
     platform: "Learn With Sumith",
-    platformColor: "#f59e0b",
+    platformColor: "var(--primary)",
     completionDate: "2024",
     imageUrl: ReactiveAccelaeratorCertificate,
     summary:

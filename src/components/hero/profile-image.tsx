@@ -9,15 +9,15 @@ export const ProfileImage = () => {
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-      className="relative flex items-center justify-center p-4 mb-6 pointer-events-none"
+      className="relative flex items-center justify-center p-4 mb-8 pointer-events-none"
     >
-      {/* Soft Outer Glow */}
-      <div className="absolute inset-0 rounded-full bg-linear-to-r from-green-500/40 to-cyan-500/10 opacity-5 blur-3xl animate-pulse"></div>
+      {/* Soft Outer Glow - Now uses theme primary color */}
+      <div className="absolute inset-0 rounded-full bg-primary/20 opacity-15 blur-[80px] animate-pulse"></div>
 
-      {/* Sharp Gradient Border Ring */}
-      <div className="relative z-10 w-50 h-50 md:w-60 md:h-60 rounded-full p-0.75 bg-linear-to-r from-green-500 to-cyan-500 shadow-2xl">
-        {/* Inner Black Container to mask the image */}
-        <div className="w-full h-full bg-black rounded-full overflow-hidden relative">
+      {/* Sharp Gradient Border Ring - Drastically Increased Size */}
+      <div className="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full p-1 bg-linear-to-b from-primary via-primary/50 to-transparent shadow-2xl shadow-primary/20">
+        {/* Inner Container to mask the image */}
+        <div className="w-full h-full bg-background rounded-full overflow-hidden relative">
           <Image
             src="/arafat.png"
             alt="Arafat Hossain"

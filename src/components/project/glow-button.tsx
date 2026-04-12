@@ -51,10 +51,10 @@ export default function GlowButton({
           ${compact ? "h-8 px-3 text-xs" : "h-9 px-4 text-sm"}
           ${
             variant === "default"
-              ? "text-white border-0"
+              ? "text-primary-foreground border-0"
               : variant === "outline"
-                ? "bg-transparent border-zinc-700/60 text-zinc-300 hover:text-white hover:bg-zinc-800/60"
-                : "bg-transparent text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/40"
+                ? "bg-transparent border-border text-muted-foreground hover:text-foreground hover:bg-accent"
+                : "bg-transparent text-muted-foreground hover:text-foreground hover:bg-accent/50"
           }`}
         style={
           variant === "default"
