@@ -1,6 +1,5 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { ExternalLink, Quote, Star } from "lucide-react";
 import Image from "next/image";
@@ -64,21 +63,9 @@ export default function TestimonialCard({ data }: { data: Testimonial }) {
           </h3>
         </div>
 
-        <blockquote className="text-muted-foreground text-md leading-relaxed grow italic border-l-2 border-border pl-4 mt-3">
+        <blockquote className="text-muted-foreground text-base leading-relaxed tracking-wide grow italic border-l-2  pl-4 mt-3">
           &quot;{data.quote}&quot;
         </blockquote>
-
-        <div className="flex flex-wrap gap-2.5 mt-6 pt-4 border-t border-border/50">
-          {data.tags.map((tag) => (
-            <Badge
-              key={tag}
-              variant="outline"
-              className="bg-secondary/50 text-secondary-foreground border-border text-[11px] font-medium tracking-wide hover:bg-secondary hover:text-foreground transition-colors cursor-default"
-            >
-              {tag}
-            </Badge>
-          ))}
-        </div>
       </div>
 
       {data.platform && (
@@ -86,14 +73,10 @@ export default function TestimonialCard({ data }: { data: Testimonial }) {
           href="#"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-auto w-full border-t border-border bg-secondary/10 px-8 py-3 flex items-center justify-between hover:bg-primary/5 transition-colors group/link cursor-pointer"
+          className="mt-auto w-full border-t border-border bg-secondary/10 px-8 py-0 flex items-center justify-between hover:bg-primary/5 transition-colors group/link cursor-pointer"
         >
-          <div className="flex items-center gap-3">
-            <span className="text-xs text-muted-foreground font-medium tracking-wide">
-              Verify on
-            </span>
-            <FreelancerLogoFull />
-          </div>
+          <FreelancerLogoFull />
+
           <ExternalLink className="w-4 h-4 text-muted-foreground group-hover/link:text-primary group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-all" />
         </a>
       )}

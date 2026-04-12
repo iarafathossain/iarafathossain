@@ -63,7 +63,7 @@ export default function ProjectMediaDisplay({
 }: ProjectMediaDisplayProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState<1 | -1>(1);
-  const [activeTab, setActiveTab] = useState("video");
+  const [activeTab, setActiveTab] = useState("showcase");
   const prefersReducedMotion = useReducedMotion();
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 

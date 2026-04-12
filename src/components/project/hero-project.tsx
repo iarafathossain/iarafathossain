@@ -10,10 +10,10 @@ import {
   Layers,
   Server,
 } from "lucide-react";
+import SkillBadge from "../skill/skill-badge";
 import GlowButton from "./glow-button";
 import { Project } from "./interface";
 import ProjectMediaDisplay from "./project-media-display";
-import TechPill from "./tech-pill";
 
 export default function HeroProject({ project }: { project: Project }) {
   return (
@@ -52,7 +52,7 @@ export default function HeroProject({ project }: { project: Project }) {
           </h3>
         </div>
 
-        <p className="text-muted-foreground text-sm leading-relaxed max-w-lg">
+        <p className="text-muted-foreground text-base leading-relaxed max-w-lg">
           {project.description}
         </p>
 
@@ -64,7 +64,7 @@ export default function HeroProject({ project }: { project: Project }) {
             </div>
             <div className="flex flex-wrap gap-1.5">
               {project.frontendStack.map((t) => (
-                <TechPill key={t} label={t} />
+                <SkillBadge key={t.name} skill={t} />
               ))}
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function HeroProject({ project }: { project: Project }) {
             </div>
             <div className="flex flex-wrap gap-1.5">
               {project.backendStack.map((t) => (
-                <TechPill key={t} label={t} />
+                <SkillBadge key={t.name} skill={t} />
               ))}
             </div>
           </div>

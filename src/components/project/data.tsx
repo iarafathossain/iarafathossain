@@ -1,3 +1,10 @@
+import {
+  JavascriptIcon,
+  NextJSIcon,
+  NodeJSIcon,
+  PrismaIcon,
+} from "@/assets/svgs";
+import { Lock } from "lucide-react";
 import { Project } from "./interface";
 
 export const PROJECTS: Project[] = [
@@ -15,19 +22,28 @@ export const PROJECTS: Project[] = [
       "https://picsum.photos/seed/nexus3/1200/3400",
     ],
     frontendStack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "Framer Motion",
+      {
+        name: "Next.js",
+        icon: <NextJSIcon className="w-4 h-4" />,
+      },
     ],
     backendStack: [
-      "Node.js",
-      "Express.js",
-      "PostgreSQL",
-      "Prisma ORM",
-      "Auth.js",
-      "Redis",
+      {
+        name: "Node.js",
+        icon: <NodeJSIcon className="w-4 h-4" />,
+      },
+      {
+        name: "Express.js",
+        icon: <JavascriptIcon className="w-4 h-4" />,
+      },
+      {
+        name: "Prisma ORM",
+        icon: <PrismaIcon className="w-4 h-4" />,
+      },
+      {
+        name: "Auth.js",
+        icon: <Lock className="w-4 h-4" />,
+      },
     ],
     liveUrl: "https://nexus-crm.example.com",
     githubUrlFrontend: "https://github.com/example/nexus-crm-frontend",
@@ -49,19 +65,24 @@ export const PROJECTS: Project[] = [
       "https://picsum.photos/seed/forge3/1200/3300",
     ],
     frontendStack: [
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "React Query",
-      "Recharts",
+      {
+        name: "React.js",
+        icon: <JavascriptIcon className="w-4 h-4" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <JavascriptIcon className="w-4 h-4" />,
+      },
     ],
     backendStack: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Mongoose",
-      "JWT",
-      "Docker",
+      {
+        name: "Node.js",
+        icon: <NodeJSIcon className="w-4 h-4" />,
+      },
+      {
+        name: "Express.js",
+        icon: <JavascriptIcon className="w-4 h-4" />,
+      },
     ],
     liveUrl: "https://forge-api.example.com",
     githubUrlFrontend: "https://github.com/example/forge-api-frontend",
@@ -83,18 +104,24 @@ export const PROJECTS: Project[] = [
       "https://picsum.photos/seed/atlas3/1200/2800",
     ],
     frontendStack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "Chart.js",
+      {
+        name: "Next.js",
+        icon: <NextJSIcon className="w-4 h-4" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <JavascriptIcon className="w-4 h-4" />,
+      },
     ],
     backendStack: [
-      "Node.js",
-      "PostgreSQL",
-      "Prisma ORM",
-      "Better-Auth",
-      "OAuth 2.0",
+      {
+        name: "Node.js",
+        icon: <NodeJSIcon className="w-4 h-4" />,
+      },
+      {
+        name: "Express.js",
+        icon: <JavascriptIcon className="w-4 h-4" />,
+      },
     ],
     liveUrl: "https://atlas-finance.example.com",
     githubUrlFrontend: "https://github.com/example/atlas-finance-frontend",

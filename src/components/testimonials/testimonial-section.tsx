@@ -75,7 +75,7 @@ export default function TestimonialsRedesign() {
           description="A few words from clients and mentors across freelance work and mentorship."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {testimonials.map((data, index) => (
             <motion.div
               key={index}

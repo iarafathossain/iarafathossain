@@ -1,3 +1,5 @@
+import { ISkill } from "../skill/interface";
+
 export interface Project {
   id: string;
   title: string;
@@ -5,8 +7,8 @@ export interface Project {
   description: string;
   videoUrl: string;
   fullPageImageUrlArray: string[];
-  frontendStack: string[];
-  backendStack: string[];
+  frontendStack: ISkill[];
+  backendStack: ISkill[];
   liveUrl: string;
   githubUrlFrontend: string;
   githubUrlBackend: string;

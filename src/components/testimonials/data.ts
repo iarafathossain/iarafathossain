@@ -8,24 +8,11 @@ export const testimonials: Testimonial[] = [
     platform: "Freelancer.com",
     price: "$590 USD",
     rating: 5,
-    title: "Index page redesign",
+    title: "Landing Page Design",
     quote:
       "Excellent designer with a great eye for detail. Completes all revisions as requested and provides a first class product. Will be using him again for sure.",
     tags: ["Website Design", "CSS", "HTML", "Express JS"],
     avatar: "/richard.webp",
-  },
-  {
-    name: "Instructor Name Placeholder",
-    designation: "🎓Senior Instructor & Mentor",
-    flag: null,
-    platform: null,
-    price: null,
-    rating: 5,
-    title: "Full Stack Development Mentorship",
-    quote:
-      "Arafat is an exceptional developer. His ability to grasp complex full-stack concepts and apply them to real-world problems is outstanding. Always writes clean, scalable code.",
-    tags: ["Next.js", "React", "Full Stack", "Problem Solving"],
-    avatar: "/arafat.png",
   },
   {
     name: "Richard N.",

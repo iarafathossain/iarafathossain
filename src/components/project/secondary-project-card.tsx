@@ -9,10 +9,10 @@ import {
   ExternalLink,
   Code as Github,
 } from "lucide-react";
+import SkillBadge from "../skill/skill-badge";
 import GlowButton from "./glow-button";
 import { Project } from "./interface";
 import ProjectMediaDisplay from "./project-media-display";
-import TechPill from "./tech-pill";
 
 export default function SecondaryProjectCard({
   project,
@@ -89,7 +89,7 @@ export default function SecondaryProjectCard({
             </div>
           </div>
 
-          <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+          <p className="text-muted-foreground text-base leading-relaxed line-clamp-3">
             {project.description}
           </p>
 
@@ -98,7 +98,7 @@ export default function SecondaryProjectCard({
               ...project.frontendStack.slice(0, 3),
               ...project.backendStack.slice(0, 3),
             ].map((t) => (
-              <TechPill key={t} label={t} compact />
+              <SkillBadge key={t.name} skill={t} />
             ))}
           </div>
 

@@ -57,37 +57,37 @@ export const BackgroundEffects = () => {
 
       {/* Floating Keywords */}
       <span
-        className="float-element text-3xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
+        className="float-element text-3xl font-extrabold text-foreground/10 dark:text-foreground/10 absolute"
         style={{ top: "15%", left: "10%" }}
       >
         JavaScript
       </span>
       <span
-        className="float-element text-4xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
+        className="float-element text-4xl font-extrabold text-foreground/10 dark:text-foreground/10 absolute"
         style={{ top: "65%", left: "15%" }}
       >
         TypeScript
       </span>
       <span
-        className="float-element text-5xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
+        className="float-element text-5xl font-extrabold text-foreground/10 dark:text-foreground/10 absolute"
         style={{ top: "25%", right: "20%" }}
       >
         React
       </span>
       <span
-        className="float-element text-3xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
+        className="float-element text-3xl font-extrabold text-foreground/10 dark:text-foreground/10 absolute"
         style={{ top: "50%", right: "10%" }}
       >
         Next.js
       </span>
       <span
-        className="float-element text-4xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
+        className="float-element text-4xl font-extrabold text-foreground/10 dark:text-foreground/10 absolute"
         style={{ top: "80%", right: "25%" }}
       >
         React
       </span>
       <span
-        className="float-element text-2xl font-extrabold text-foreground/5 dark:text-foreground/5 absolute"
+        className="float-element text-2xl font-extrabold text-foreground/10 dark:text-foreground/10 absolute"
         style={{ top: "35%", left: "25%" }}
       >
         Next.js
