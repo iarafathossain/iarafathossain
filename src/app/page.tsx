@@ -1,5 +1,6 @@
 "use client";
 
+import ArchitecturePatterns from "@/components/architecture/architecture-section";
 import EducationSection from "@/components/education/education-section";
 import { HeroSection } from "@/components/hero/hero-section";
 import ProjectsSection from "@/components/project/project-section";
@@ -49,6 +50,8 @@ const HomePage = () => {
       <HeroSection />
       {/* Skills Section */}
       <SkillsSection />
+      {/* Architecture Section */}
+      <ArchitecturePatterns />
       {/* Projects Section */}
       <ProjectsSection />
       {/* Testimonials Section */}

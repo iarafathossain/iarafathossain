@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Heart, Star } from "lucide-react";
 import { useLayoutEffect, useRef } from "react";
-import SquareBGEffect from "../shared/square-bg-effect";
+import DotBGEffect from "../shared/dot-bg-effect";
 import { testimonials } from "./data";
 import TestimonialCard from "./testimonial-card";
 
@@ -45,7 +45,7 @@ export default function TestimonialsRedesign() {
       ref={componentRef}
       className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <SquareBGEffect />
+      <DotBGEffect />
       <div
         ref={backgroundRef}
         className="absolute inset-0 pointer-events-none z-0"

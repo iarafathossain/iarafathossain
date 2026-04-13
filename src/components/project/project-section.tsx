@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import SectionHeading from "../section-heading";
-import DiagonalBGEffect from "../shared/diagonal-bg-effect";
+import SquareBGEffect from "../shared/square-bg-effect";
 import { PROJECTS } from "./data";
 import HeroProject from "./hero-project";
 import SecondaryProjectCard from "./secondary-project-card";
@@ -70,7 +70,7 @@ export default function ProjectsSection() {
       ref={sectionRef}
       className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <DiagonalBGEffect />
+      <SquareBGEffect />
 
       <div className="relative max-w-6xl mx-auto">
         <SectionHeading
