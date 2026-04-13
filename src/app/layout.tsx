@@ -1,4 +1,4 @@
-// import Navbar from "@/components/layout/navbar";
+import Navbar from "@/components/layout/navbar/navbar-section";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import type { Metadata } from "next";
@@ -11,12 +11,6 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
-
-// const satoshiBoldItalic = localFont({
-//   src: "../assets/fonts/Satoshi-BoldItalic.otf",
-//   variable: "--font-satoshi-bold-italic",
-//   display: "swap",
-// });
 
 const milker = localFont({
   src: "../assets/fonts/Milker.otf",
@@ -45,9 +39,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            {/* <header>
+            <header>
               <Navbar />
-            </header> */}
+            </header>
             <main>{children}</main>
             <footer>Footer</footer>
           </TooltipProvider>

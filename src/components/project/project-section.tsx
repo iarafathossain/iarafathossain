@@ -72,7 +72,7 @@ export default function ProjectsSection() {
     >
       <SquareBGEffect />
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">
         <SectionHeading
           ref={headingRef}
           label="Selected Work"

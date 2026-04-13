@@ -26,7 +26,7 @@ export default function ArchitecturePatterns() {
     <section className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <DotBGEffect />
 
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">
         <SectionHeading
           label="System Design in Practice"
           title="ARCHITECTURE & PATTERNS"

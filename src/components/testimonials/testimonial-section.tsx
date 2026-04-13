@@ -60,7 +60,7 @@ export default function TestimonialsRedesign() {
         <Heart className="bg-graphic absolute top-[50%] left-[50%] w-32 h-32 text-foreground/15 -rotate-3" />
       </div>
 
-      <div className="z-10 w-full max-w-7xl mx-auto px-6">
+      <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">
         <SectionHeading
           ref={headingRef}
           label="Trusted Feedback"

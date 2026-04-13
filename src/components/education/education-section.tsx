@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import SectionLabel from "../section-label";
-import SquareBGEffect from "../shared/square-bg-effect";
+import DotBGEffect from "../shared/dot-bg-effect";
 import AcademicCard from "./academic-card";
 import CertificationCard from "./certification-card";
 import { CERTIFICATIONS, CERTIFICATIONS_TITLE } from "./data";
@@ -54,7 +54,7 @@ export default function EducationSection() {
       ref={sectionRef}
       className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <SquareBGEffect />
+      <DotBGEffect />
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute rounded-full"
@@ -82,7 +82,7 @@ export default function EducationSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">
         <SectionHeading
           ref={headingRef}
           label="Continuous Learning"
