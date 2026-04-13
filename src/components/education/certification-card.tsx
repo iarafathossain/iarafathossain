@@ -5,6 +5,8 @@ import { ICertification } from "./interface";
 
 const CertificationCard = ({ cert }: { cert: ICertification }) => (
   <motion.div
+    whileHover={{ y: -4 }}
+    transition={{ type: "spring", stiffness: 300, damping: 20 }}
     variants={{
       hidden: { opacity: 0, y: 32 },
       visible: {
@@ -13,8 +15,9 @@ const CertificationCard = ({ cert }: { cert: ICertification }) => (
         transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
       },
     }}
-    className="cert-card group flex flex-col lg:flex-row rounded-2xl overflow-hidden border border-border/40 bg-card/60 backdrop-blur-md hover:border-border/80 transition-colors duration-300 shadow-md"
+    className="cert-card group relative flex flex-col lg:flex-row rounded-2xl overflow-hidden border border-border bg-card/50 backdrop-blur-md hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-primary/10"
   >
+    <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     <div className="relative w-full lg:w-[42%] min-h-72 lg:min-h-88 overflow-hidden bg-secondary/30">
       <Image
         src={cert.imageUrl}

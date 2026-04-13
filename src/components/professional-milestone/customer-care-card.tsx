@@ -4,7 +4,8 @@ import { Headset } from "lucide-react";
 
 export default function CustomerCareCard() {
   return (
-    <Card className="w-full rounded-xl border border-border bg-card/40 shadow-xl shadow-primary/5 backdrop-blur-md">
+    <Card className="group relative w-full rounded-xl border border-border bg-card/50 shadow-sm hover:shadow-primary/10 backdrop-blur-md hover:border-primary/30 transition-all duration-300">
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <CardContent className="p-6">
         <div className="flex flex-col items-start justify-between gap-5 md:flex-row md:items-center">
           <div className="flex items-start gap-5 md:items-center">

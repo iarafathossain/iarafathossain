@@ -9,9 +9,11 @@ import { Testimonial } from "./interface";
 export default function TestimonialCard({ data }: { data: Testimonial }) {
   return (
     <motion.div
-      whileHover={{ y: -8 }}
-      className="relative flex flex-col h-full rounded-2xl overflow-hidden bg-card/40 backdrop-blur-lg border border-border shadow-sm hover:shadow-lg hover:shadow-primary/5 hover:border-primary/30 transition-all duration-300 group"
+      whileHover={{ y: -4 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="relative flex flex-col h-full rounded-2xl overflow-hidden bg-card/50 backdrop-blur-md border border-border shadow-sm hover:shadow-primary/10 hover:border-primary/30 transition-all duration-300 group"
     >
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <Quote className="absolute top-6 right-6 w-16 h-16 text-foreground/3 -rotate-12 group-hover:text-primary/10 transition-colors duration-500" />
 
       <div className="p-8 pb-6 grow flex flex-col z-10">

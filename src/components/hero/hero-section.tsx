@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BackgroundEffects } from "./background-effect";
 import { ProfileImage } from "./profile-image";
-import { ReviewCard } from "./review-card";
+import { ReviewCTA } from "./review-cta";
 import { ScrollIndicator } from "./scroll-indicator";
 
 const TAGLINES = [
@@ -147,7 +147,7 @@ export const HeroSection = () => {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <ReviewCard rating={5.0} platform="Freelancer" compact />
+          <ReviewCTA rating={5.0} platform="Freelancer" compact />
         </motion.div>
       </motion.div>
     </section>

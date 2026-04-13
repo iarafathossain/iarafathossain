@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 import { ExternalLink, Star } from "lucide-react";
 import Link from "next/link";
 
-interface ReviewCardProps {
+interface ReviewCTAProps {
   rating: number;
   platform: string;
   compact?: boolean;
 }
 
-export const ReviewCard = ({
+export const ReviewCTA = ({
   rating,
   platform,
   compact = false,
-}: ReviewCardProps) => {
+}: ReviewCTAProps) => {
   if (compact) {
     return (
       <motion.div

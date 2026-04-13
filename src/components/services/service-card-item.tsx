@@ -69,11 +69,11 @@ const CardBadge: React.FC<{ label: string; isHighValue: boolean }> = ({
 const ServiceCardItem: React.FC<{ card: ServiceCard }> = ({ card }) => {
   const [isHovered, setIsHovered] = React.useState(false);
   const Icon = card.icon;
-  const y = useSpring(0, { stiffness: 380, damping: 28 });
+  const y = useSpring(0, { stiffness: 300, damping: 20 });
 
   const handleHoverStart = () => {
     setIsHovered(true);
-    y.set(-8);
+    y.set(-4);
   };
 
   const handleHoverEnd = () => {
@@ -94,7 +94,7 @@ const ServiceCardItem: React.FC<{ card: ServiceCard }> = ({ card }) => {
         ${
           card.isHighValue
             ? "bg-card/60 border-primary/40"
-            : "bg-card/50 border-border hover:border-primary/60"
+            : "bg-card/50 border-border hover:border-primary/30 shadow-sm hover:shadow-primary/10"
         }
       `}
       animate={

@@ -5,7 +5,8 @@ import Image from "next/image";
 
 export default function HultPrizeCard() {
   return (
-    <Card className="w-full overflow-hidden rounded-xl border border-border bg-card/40 shadow-2xl shadow-primary/5 backdrop-blur-md">
+    <Card className="group relative w-full overflow-hidden rounded-xl border border-border bg-card/50 shadow-sm hover:shadow-primary/10 backdrop-blur-md hover:border-primary/30 transition-all duration-300">
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <CardContent className="p-0">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="relative h-64 min-h-64 overflow-hidden md:h-auto">

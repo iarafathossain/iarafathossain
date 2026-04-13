@@ -22,8 +22,8 @@ export default function SecondaryProjectCard({
   return (
     <motion.div
       className="project-card h-full"
-      whileHover={{ scale: 1.015, y: -3 }}
-      transition={{ type: "spring", stiffness: 300, damping: 22 }}
+      whileHover={{ y: -4 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLElement).style.setProperty(
           "--card-glow",
@@ -38,14 +38,7 @@ export default function SecondaryProjectCard({
       }}
     >
       <Card
-        className="h-full bg-card/80 border-border/50 backdrop-blur-md overflow-hidden transition-all duration-300 hover:border-border/80 flex flex-col group"
-        onMouseEnter={(e) => {
-          (e.currentTarget as HTMLElement).style.boxShadow =
-            `0 8px 40px 0 color-mix(in oklch, ${project.accentColor} 8%, transparent)`;
-        }}
-        onMouseLeave={(e) => {
-          (e.currentTarget as HTMLElement).style.boxShadow = "";
-        }}
+        className="h-full bg-card/50 border border-border backdrop-blur-md overflow-hidden transition-all duration-300 hover:border-primary/30 shadow-sm hover:shadow-primary/10 flex flex-col group"
         style={{
           boxShadow:
             "inset 0 1px 0 color-mix(in oklch, var(--foreground) 3%, transparent)",

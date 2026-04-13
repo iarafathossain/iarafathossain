@@ -19,8 +19,8 @@ export default function MilestoneMotionCard({
       whileInView="visible"
       viewport={{ once: true, margin: "-80px" }}
       variants={variants}
-      whileHover={{ scale: 1.01 }}
-      transition={{ type: "spring", stiffness: 280, damping: 26 }}
+      whileHover={{ y: -4 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className="w-full"
     >
       {children}
