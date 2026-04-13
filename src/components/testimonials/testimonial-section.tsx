@@ -57,7 +57,6 @@ export default function TestimonialsRedesign() {
         <Heart className="bg-graphic absolute top-[70%] left-[8%] w-16 h-16 text-primary/20 -rotate-12" />
         <Star className="bg-graphic absolute top-[30%] right-[10%] w-20 h-20 text-foreground/3 fill-none stroke-current" />
         <Star className="bg-graphic absolute top-[80%] right-[5%] w-14 h-14 text-primary/20 fill-none stroke-current rotate-45" />
-        <Heart className="bg-graphic absolute top-[50%] left-[50%] w-32 h-32 text-foreground/15 -rotate-3" />
       </div>
 
       <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">

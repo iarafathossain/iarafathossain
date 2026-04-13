@@ -69,7 +69,7 @@ export const Navbar: React.FC = () => {
             </div>
 
             {/* ── Right: Actions (desktop) ── */}
-            <div className="hidden lg:flex items-center gap-1.5">
+            <div className="hidden lg:flex items-center gap-2">
               {SOCIAL_LINKS.map((link) => (
                 <SocialButton key={link.label} {...link} />
               ))}
