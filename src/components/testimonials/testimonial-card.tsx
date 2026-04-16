@@ -46,12 +46,6 @@ export default function TestimonialCard({ data }: { data: Testimonial }) {
               </div>
             </div>
           </div>
-
-          {data.price && (
-            <span className="text-primary font-mono text-sm font-semibold tracking-tight">
-              {data.price}
-            </span>
-          )}
         </div>
 
         <div className="mt-2">

@@ -1,25 +1,13 @@
 import type { Variants } from "framer-motion";
+import { SECTION_CARD_MOTION } from "../shared/section-animations";
 
 export const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.12,
     },
   },
 };
 
-export const cardVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
-};
+export const cardVariants: Variants = SECTION_CARD_MOTION;

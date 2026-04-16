@@ -7,6 +7,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import SectionLabel from "../section-label";
 import DotBGEffect from "../shared/dot-bg-effect";
+import {
+  SECTION_GSAP_BLOCK,
+  SECTION_GSAP_HEADING,
+} from "../shared/section-animations";
+import SectionShell from "../shared/section-shell";
 import AcademicCard from "./academic-card";
 import CertificationCard from "./certification-card";
 import { CERTIFICATIONS, CERTIFICATIONS_TITLE } from "./data";
@@ -22,26 +27,20 @@ export default function EducationSection() {
 
     const ctx = gsap.context(() => {
       gsap.from(headingRef.current, {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        ease: "power3.out",
+        ...SECTION_GSAP_HEADING,
         scrollTrigger: {
           trigger: headingRef.current,
-          start: "top 85%",
-          once: true,
+          start: SECTION_GSAP_HEADING.start,
+          once: SECTION_GSAP_HEADING.once,
         },
       });
 
       gsap.from(academicRef.current, {
-        opacity: 0,
-        y: 24,
-        duration: 0.7,
-        ease: "power2.out",
+        ...SECTION_GSAP_BLOCK,
         scrollTrigger: {
           trigger: academicRef.current,
-          start: "top 85%",
-          once: true,
+          start: SECTION_GSAP_BLOCK.start,
+          once: SECTION_GSAP_BLOCK.once,
         },
       });
     }, sectionRef);
@@ -50,51 +49,54 @@ export default function EducationSection() {
   }, []);
 
   return (
-    <section
+    <SectionShell
       ref={sectionRef}
-      className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      id="education"
+      background={
+        <>
+          <DotBGEffect />
+          <div className="absolute inset-0 pointer-events-none">
+            <div
+              className="absolute rounded-full"
+              style={{
+                width: 600,
+                height: 600,
+                top: "10%",
+                left: "-10%",
+                background:
+                  "radial-gradient(circle, color-mix(in oklch, var(--primary) 12%, transparent) 0%, transparent 70%)",
+                filter: "blur(60px)",
+              }}
+            />
+            <div
+              className="absolute rounded-full"
+              style={{
+                width: 500,
+                height: 500,
+                bottom: "5%",
+                right: "-8%",
+                background:
+                  "radial-gradient(circle, color-mix(in oklch, var(--secondary-foreground) 12%, transparent) 0%, transparent 70%)",
+                filter: "blur(60px)",
+              }}
+            />
+          </div>
+        </>
+      }
     >
-      <DotBGEffect />
-      <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="absolute rounded-full"
-          style={{
-            width: 600,
-            height: 600,
-            top: "10%",
-            left: "-10%",
-            background:
-              "radial-gradient(circle, color-mix(in oklch, var(--primary) 12%, transparent) 0%, transparent 70%)",
-            filter: "blur(60px)",
-          }}
-        />
-        <div
-          className="absolute rounded-full"
-          style={{
-            width: 500,
-            height: 500,
-            bottom: "5%",
-            right: "-8%",
-            background:
-              "radial-gradient(circle, color-mix(in oklch, var(--secondary-foreground) 12%, transparent) 0%, transparent 70%)",
-            filter: "blur(60px)",
-          }}
-        />
-      </div>
-
-      <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">
+      <div className="space-y-12">
         <SectionHeading
           ref={headingRef}
           label="Continuous Learning"
-          title="Education & Certifications"
+          title="Education"
           description="Bridging the gap between academic theory and modern web technologies."
         />
 
-        <div ref={academicRef} className="mb-10">
+        <div ref={academicRef}>
           <AcademicCard />
         </div>
 
-        <div className="mb-6">
+        <div>
           <div className="flex items-center gap-3 mb-6">
             <SectionLabel>{CERTIFICATIONS_TITLE}</SectionLabel>
           </div>
@@ -103,7 +105,7 @@ export default function EducationSection() {
             ref={certGridRef}
             variants={{
               hidden: {
-                transition: { staggerChildren: 0.1, staggerDirection: -1 },
+                transition: { staggerChildren: 0.12 },
               },
               visible: {
                 transition: { staggerChildren: 0.12 },
@@ -120,6 +122,6 @@ export default function EducationSection() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

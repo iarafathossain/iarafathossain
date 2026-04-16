@@ -4,7 +4,7 @@ import type { NavItem, SocialLink } from "./interface";
 export const NAV_ITEMS: NavItem[] = [
   { label: "Services", href: "#services" },
   { label: "Skills", href: "#skills" },
-  { label: "Projects & Cases", href: "#projects", highlight: true },
+  { label: "Projects", href: "#projects" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Education", href: "#education" },
   { label: "About", href: "#about" },

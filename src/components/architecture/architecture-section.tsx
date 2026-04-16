@@ -3,6 +3,7 @@
 import SectionHeading from "@/components/section-heading";
 import { type TargetAndTransition, type Variants } from "framer-motion";
 import DotBGEffect from "../shared/dot-bg-effect";
+import SectionShell from "../shared/section-shell";
 import { ExpressRouteCode, NextActionCode } from "./architecture-code";
 import ArchitecturePatternCard from "./architecture-pattern-card";
 
@@ -23,10 +24,8 @@ const cardVariants: Variants = {
 
 export default function ArchitecturePatterns() {
   return (
-    <section className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <DotBGEffect />
-
-      <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">
+    <SectionShell background={<DotBGEffect />}>
+      <div className="space-y-12">
         <SectionHeading
           label="System Design in Practice"
           title="ARCHITECTURE & PATTERNS"
@@ -55,6 +54,6 @@ export default function ArchitecturePatterns() {
           </ArchitecturePatternCard>
         </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

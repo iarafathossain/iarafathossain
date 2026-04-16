@@ -2,6 +2,7 @@
 
 import SectionHeading from "@/components/section-heading";
 import { type TargetAndTransition, type Variants } from "framer-motion";
+import SectionShell from "../shared/section-shell";
 import SquareBGEffect from "../shared/square-bg-effect";
 import CustomerCareCard from "./customer-care-card";
 import HultPrizeCard from "./hult-prize-card";
@@ -26,10 +27,8 @@ const slideUp: Variants = {
 
 export default function ProfessionalMilestones() {
   return (
-    <section className="relative w-full overflow-hidden bg-muted px-4 py-24 sm:px-6 lg:px-8">
-      <SquareBGEffect />
-
-      <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">
+    <SectionShell id="about" background={<SquareBGEffect />}>
+      <div className="space-y-12">
         <SectionHeading
           label="Beyond Coding"
           title="PROFESSIONAL MILESTONES"
@@ -46,6 +45,6 @@ export default function ProfessionalMilestones() {
           </MilestoneMotionCard>
         </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

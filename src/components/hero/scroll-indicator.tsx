@@ -9,7 +9,7 @@ export const ScrollIndicator = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1.2, duration: 1 }}
-      className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none"
+      className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none"
     >
       <div className="relative flex flex-col items-center">
         <Mouse className="w-6 h-6 text-muted-foreground animate-pulseSlow" />

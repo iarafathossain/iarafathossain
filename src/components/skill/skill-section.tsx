@@ -5,6 +5,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import SectionLabel from "../section-label";
+import {
+  SECTION_GSAP_BLOCK,
+  SECTION_GSAP_HEADING,
+} from "../shared/section-animations";
+import SectionShell from "../shared/section-shell";
 import SquareBGEffect from "../shared/square-bg-effect";
 import BentoCard from "./bento-card";
 import CoreSkill from "./core-skill";
@@ -23,26 +28,20 @@ export default function SkillsSection() {
 
     const ctx = gsap.context(() => {
       gsap.from(headingRef.current, {
-        opacity: 0,
-        y: 30,
-        duration: 0.8,
-        ease: "power3.out",
+        ...SECTION_GSAP_HEADING,
         scrollTrigger: {
           trigger: headingRef.current,
-          start: "top 85%",
-          once: true,
+          start: SECTION_GSAP_HEADING.start,
+          once: SECTION_GSAP_HEADING.once,
         },
       });
 
       gsap.from(coreRowRef.current, {
-        opacity: 0,
-        y: 24,
-        duration: 0.7,
-        ease: "power2.out",
+        ...SECTION_GSAP_BLOCK,
         scrollTrigger: {
           trigger: coreRowRef.current,
-          start: "top 85%",
-          once: true,
+          start: SECTION_GSAP_BLOCK.start,
+          once: SECTION_GSAP_BLOCK.once,
         },
       });
 
@@ -51,26 +50,23 @@ export default function SkillsSection() {
         gsap.from(bentoCards, {
           opacity: 0,
           y: 32,
-          duration: 0.6,
+          duration: 0.65,
           stagger: 0.1,
           ease: "power2.out",
           scrollTrigger: {
             trigger: bentoRef.current,
-            start: "top 82%",
+            start: SECTION_GSAP_BLOCK.start,
             once: true,
           },
         });
       }
 
       gsap.from(exploringRef.current, {
-        opacity: 0,
-        y: 20,
-        duration: 0.6,
-        ease: "power2.out",
+        ...SECTION_GSAP_BLOCK,
         scrollTrigger: {
           trigger: exploringRef.current,
-          start: "top 88%",
-          once: true,
+          start: SECTION_GSAP_BLOCK.start,
+          once: SECTION_GSAP_BLOCK.once,
         },
       });
     }, sectionRef);
@@ -79,15 +75,8 @@ export default function SkillsSection() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
-    >
-      {/* Background ambient glow - Now using theme colors */}
-
-      <SquareBGEffect />
-
-      <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">
+    <SectionShell ref={sectionRef} id="skills" background={<SquareBGEffect />}>
+      <div className="space-y-12">
         <SectionHeading
           ref={headingRef}
           label="What I Work With"
@@ -95,7 +84,7 @@ export default function SkillsSection() {
           description="A curated stack I rely on — from pixel-perfect frontends to production-grade APIs."
         />
 
-        <div className="mb-14">
+        <div>
           <div className="flex items-center justify-center mb-6">
             <SectionLabel>Core Stack</SectionLabel>
           </div>
@@ -107,9 +96,9 @@ export default function SkillsSection() {
         </div>
 
         {/* Divider - Now uses theme borders */}
-        <div className="relative my-10 flex items-center gap-4">
+        <div className="relative flex items-center gap-4">
           <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-transparent" />
-          <span className="text-muted-foreground text-lg tracking-widest uppercase font-mono">
+          <span className="text-muted-foreground text-sm tracking-widest uppercase font-mono shrink-0">
             Categories
           </span>
           <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-transparent" />
@@ -122,16 +111,16 @@ export default function SkillsSection() {
         </div>
 
         {/* Divider */}
-        <div className="relative my-10 flex items-center gap-4">
-          <div className="flex-1 h-px bg-linear-to-r from-transparent via-border/50 to-transparent" />
-          <span className="text-muted-foreground text-lg tracking-widest uppercase font-mono">
+        <div className="relative flex items-center gap-4">
+          <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-transparent" />
+          <span className="text-muted-foreground text-sm tracking-widest uppercase font-mono shrink-0">
             On the Horizon
           </span>
-          <div className="flex-1 h-px bg-linear-to-r from-transparent via-border/50 to-transparent" />
+          <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-transparent" />
         </div>
 
         <SkillExploring ref={exploringRef} />
       </div>
-    </section>
+    </SectionShell>
   );
 }

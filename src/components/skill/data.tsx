@@ -90,9 +90,17 @@ export const BENTO_CATEGORIES: IBentoCategory[] = [
         name: "Tailwind CSS & Shadcn UI",
         icon: <TailwindcssIcon className="w-4 h-4" />,
       },
-      { name: "HTML5", icon: <HtmlIcon className="w-4 h-4" /> },
-      { name: "CSS3", icon: <CssIcon className="w-4 h-4" /> },
+      {
+        name: "Firebase",
+        icon: <FileJson />,
+      },
+      {
+        name: "framer-motion",
+        icon: <Database />,
+      },
       { name: "Bootstrap", icon: <BootstrapIcon className="w-4 h-4" /> },
+      { name: "CSS3", icon: <CssIcon className="w-4 h-4" /> },
+      { name: "HTML5", icon: <HtmlIcon className="w-4 h-4" /> },
     ],
   },
   {

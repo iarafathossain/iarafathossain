@@ -12,10 +12,12 @@ import {
 import { NAV_ITEMS, RESUME_HREF, SOCIAL_LINKS } from "./data";
 import { PulsingDot } from "./pulsing-dot";
 
-export const MobileMenu: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
-  isOpen,
-  onClose,
-}) => (
+export const MobileMenu: React.FC<{
+  isOpen: boolean;
+  onClose: () => void;
+  activeHref: string;
+  onSelect: (href: string) => void;
+}> = ({ isOpen, onClose, activeHref, onSelect }) => (
   <AnimatePresence>
     {isOpen && (
       <motion.div
@@ -40,17 +42,33 @@ export const MobileMenu: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
             <motion.div key={item.href} variants={mobileItemVariants}>
               <Link
                 href={item.href}
-                onClick={onClose}
+                onClick={() => {
+                  onSelect(item.href);
+                  onClose();
+                }}
                 className={`
-                  flex items-center gap-3 w-full rounded-xl px-4 py-3
+                  group flex items-center gap-3 w-full rounded-xl px-4 py-3
                   text-sm transition-colors duration-150
-                  hover:bg-white/6 active:bg-white/10
                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60
-                  ${item.highlight ? "text-primary font-semibold" : "text-muted-foreground hover:text-foreground"}
+                  ${
+                    activeHref === item.href
+                      ? "text-primary font-semibold bg-primary/10"
+                      : "text-muted-foreground hover:text-primary hover:bg-primary/10 hover:font-semibold"
+                  }
                 `}
               >
-                {item.highlight && <PulsingDot />}
-                {item.label}
+                {activeHref === item.href && <PulsingDot />}
+                <span className="flex flex-col">
+                  <span>{item.label}</span>
+                  <span
+                    aria-hidden="true"
+                    className={`mt-1 h-0.5 w-3 rounded-full bg-primary transition-all duration-200 ${
+                      activeHref === item.href
+                        ? "opacity-100 scale-x-100"
+                        : "opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100"
+                    }`}
+                  />
+                </span>
                 {item.highlight && (
                   <span className="ml-auto text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full bg-primary/15 text-primary border border-primary/30">
                     Portfolio

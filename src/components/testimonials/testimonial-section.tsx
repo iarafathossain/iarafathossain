@@ -7,6 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Heart, Star } from "lucide-react";
 import { useLayoutEffect, useRef } from "react";
 import DotBGEffect from "../shared/dot-bg-effect";
+import { SECTION_CARD_MOTION } from "../shared/section-animations";
+import SectionShell from "../shared/section-shell";
 import { testimonials } from "./data";
 import TestimonialCard from "./testimonial-card";
 
@@ -41,36 +43,32 @@ export default function TestimonialsRedesign() {
   }, []);
 
   return (
-    <section
+    <SectionShell
       ref={componentRef}
-      className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      id="testimonials"
+      background={
+        <>
+          <DotBGEffect />
+          <div
+            ref={backgroundRef}
+            className="absolute inset-0 pointer-events-none z-0"
+          >
+            <div className="absolute top-1/4 left-1/4 w-150 h-150 bg-primary/5 blur-[120px] rounded-full" />
+            <div className="absolute bottom-1/4 right-1/4 w-150 h-150 bg-primary/5 blur-[120px] rounded-full" />
+
+            <Heart className="bg-graphic absolute top-[10%] left-[5%] w-24 h-24 text-foreground/3 rotate-12" />
+            <Heart className="bg-graphic absolute top-[70%] left-[8%] w-16 h-16 text-primary/20 -rotate-12" />
+            <Star className="bg-graphic absolute top-[30%] right-[10%] w-20 h-20 text-foreground/3 fill-none stroke-current" />
+            <Star className="bg-graphic absolute top-[80%] right-[5%] w-14 h-14 text-primary/20 fill-none stroke-current rotate-45" />
+          </div>
+        </>
+      }
     >
-      <DotBGEffect />
-      <div
-        ref={backgroundRef}
-        className="absolute inset-0 pointer-events-none z-0"
-      >
-        <div className="absolute top-1/4 left-1/4 w-150 h-150 bg-primary/5 blur-[120px] rounded-full" />
-        <div className="absolute bottom-1/4 right-1/4 w-150 h-150 bg-primary/5 blur-[120px] rounded-full" />
-
-        <Heart className="bg-graphic absolute top-[10%] left-[5%] w-24 h-24 text-foreground/3 rotate-12" />
-        <Heart className="bg-graphic absolute top-[70%] left-[8%] w-16 h-16 text-primary/20 -rotate-12" />
-        <Star className="bg-graphic absolute top-[30%] right-[10%] w-20 h-20 text-foreground/3 fill-none stroke-current" />
-        <Star className="bg-graphic absolute top-[80%] right-[5%] w-14 h-14 text-primary/20 fill-none stroke-current rotate-45" />
-      </div>
-
-      <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">
+      <div className="space-y-12">
         <SectionHeading
           ref={headingRef}
           label="Trusted Feedback"
-          title={
-            <>
-              <span className="sm:hidden">Client & Mentor</span>
-              <span className="hidden sm:inline">
-                Words From Client & Mentor
-              </span>
-            </>
-          }
+          title=" Words From Clients"
           description="A few words from clients and mentors across freelance work and mentorship."
         />
 
@@ -78,12 +76,11 @@ export default function TestimonialsRedesign() {
           {testimonials.map((data, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              variants={SECTION_CARD_MOTION}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
               transition={{
-                delay: index * 0.25,
-                duration: 0.7,
-                ease: [0.22, 1, 0.36, 1],
+                delay: index * 0.12,
               }}
             >
               <TestimonialCard data={data} />
@@ -91,6 +88,6 @@ export default function TestimonialsRedesign() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

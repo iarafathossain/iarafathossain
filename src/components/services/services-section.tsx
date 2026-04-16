@@ -4,6 +4,8 @@ import { motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
 import SectionHeading from "../section-heading";
 import DotBGEffect from "../shared/dot-bg-effect";
+import { SECTION_HEADING_MOTION } from "../shared/section-animations";
+import SectionShell from "../shared/section-shell";
 import { containerVariants } from "./animations";
 import { SERVICES } from "./data";
 import ServiceCardItem from "./service-card-item";
@@ -15,33 +17,35 @@ export const ServicesSection: React.FC = () => {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section
+    <SectionShell
       ref={ref}
       id="services"
       aria-labelledby="services-heading"
-      className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      background={
+        <>
+          <DotBGEffect />
+          {/* Optional decorative ambient blur orbs - purely presentational */}
+          <span
+            aria-hidden
+            className="pointer-events-none absolute -top-32 -left-32 w-80 h-80 rounded-full bg-primary/5 blur-3xl"
+          />
+          <span
+            aria-hidden
+            className="pointer-events-none absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl"
+          />
+        </>
+      }
     >
-      <DotBGEffect />
-      {/* Optional decorative ambient blur orbs — purely presentational */}
-      <span
-        aria-hidden
-        className="pointer-events-none absolute -top-32 -left-32 w-80 h-80 rounded-full bg-primary/5 blur-3xl"
-      />
-      <span
-        aria-hidden
-        className="pointer-events-none absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl"
-      />
-
-      <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">
+      <div className="space-y-12">
         {/* ── Section Heading ── */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          variants={SECTION_HEADING_MOTION}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
         >
           <SectionHeading
             label="What I Offer"
-            title="SERVICES & EXPERTISE"
+            title="SERVICES"
             description="Delivering end-to-end solutions, from scalable backend architectures to pixel-perfect user interfaces."
           />
         </motion.div>
@@ -62,7 +66,7 @@ export const ServicesSection: React.FC = () => {
           ))}
         </motion.div>
       </div>
-    </section>
+    </SectionShell>
   );
 };
 

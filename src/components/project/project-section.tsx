@@ -4,6 +4,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import SectionHeading from "../section-heading";
+import {
+  SECTION_GSAP_BLOCK,
+  SECTION_GSAP_HEADING,
+} from "../shared/section-animations";
+import SectionShell from "../shared/section-shell";
 import SquareBGEffect from "../shared/square-bg-effect";
 import { PROJECTS } from "./data";
 import HeroProject from "./hero-project";
@@ -22,26 +27,20 @@ export default function ProjectsSection() {
 
     const ctx = gsap.context(() => {
       gsap.from(headingRef.current, {
-        opacity: 0,
-        y: 28,
-        duration: 0.75,
-        ease: "power3.out",
+        ...SECTION_GSAP_HEADING,
         scrollTrigger: {
           trigger: headingRef.current,
-          start: "top 88%",
-          once: true,
+          start: SECTION_GSAP_HEADING.start,
+          once: SECTION_GSAP_HEADING.once,
         },
       });
 
       gsap.from(heroRef.current, {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        ease: "power3.out",
+        ...SECTION_GSAP_BLOCK,
         scrollTrigger: {
           trigger: heroRef.current,
-          start: "top 85%",
-          once: true,
+          start: SECTION_GSAP_BLOCK.start,
+          once: SECTION_GSAP_BLOCK.once,
         },
       });
 
@@ -51,12 +50,12 @@ export default function ProjectsSection() {
           opacity: 0,
           y: 36,
           duration: 0.65,
-          stagger: 0.14,
+          stagger: 0.12,
           ease: "power2.out",
           scrollTrigger: {
             trigger: gridRef.current,
-            start: "top 83%",
-            once: true,
+            start: SECTION_GSAP_BLOCK.start,
+            once: SECTION_GSAP_BLOCK.once,
           },
         });
       }
@@ -66,13 +65,12 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <section
+    <SectionShell
       ref={sectionRef}
-      className="relative w-full bg-muted py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      id="projects"
+      background={<SquareBGEffect />}
     >
-      <SquareBGEffect />
-
-      <div className="relative z-10 px-3 w-full max-w-6xl mx-auto">
+      <div className="space-y-12">
         <SectionHeading
           ref={headingRef}
           label="Selected Work"
@@ -80,7 +78,7 @@ export default function ProjectsSection() {
           description="End-to-end products shipped with care — from schema design to deployment pipeline."
         />
 
-        <div ref={heroRef} className="mb-12">
+        <div ref={heroRef}>
           <div
             className="relative rounded-2xl border border-border/50 bg-card/40 backdrop-blur-sm p-6 sm:p-8 xl:p-10 overflow-hidden"
             style={{
@@ -101,7 +99,7 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        <div className="relative my-10 flex items-center gap-4">
+        <div className="relative flex items-center gap-4">
           <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-transparent" />
           <span className="text-muted-foreground text-sm tracking-widest uppercase font-mono shrink-0">
             More Projects
@@ -115,6 +113,6 @@ export default function ProjectsSection() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionShell>
   );
 }

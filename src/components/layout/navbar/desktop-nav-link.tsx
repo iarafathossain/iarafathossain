@@ -1,47 +1,40 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import type { NavItem } from "./interface";
-import { PulsingDot } from "./pulsing-dot";
 
 export const DesktopNavLink: React.FC<{
   item: NavItem;
-  isHovered: boolean;
-  onMouseEnter: () => void;
-  onMouseLeave: () => void;
-}> = ({ item, isHovered, onMouseEnter, onMouseLeave }) => (
+  isActive: boolean;
+  onSelect: () => void;
+}> = ({ item, isActive, onSelect }) => (
   <Link
     href={item.href}
-    onMouseEnter={onMouseEnter}
-    onMouseLeave={onMouseLeave}
-    className={`
-      relative flex items-center gap-1.5 rounded-full px-3.5 py-1.5
-      text-base select-none
-      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60
-      ${
-        item.highlight
-          ? "text-primary font-medium"
-          : "text-muted-foreground hover:text-foreground"
-      }
-    `}
+    onClick={onSelect}
+    className="relative flex items-center gap-1.5 px-3.5 py-1.5
+      text-base select-none transition-all duration-150 group
+      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
   >
-    {isHovered && (
-      <motion.span
-        layoutId="nav-hover-pill"
-        className="absolute inset-0 rounded-full bg-white/6 border border-white/5 backdrop-blur-md shadow-sm shadow-black/10"
-        transition={{
-          type: "spring",
-          stiffness: 200,
-          damping: 24,
-          mass: 0.9,
-          duration: 0.35,
-        }}
-      />
-    )}
+    <span className="relative inline-flex flex-col items-center">
+      <span
+        className={`transition-colors duration-150 ${
+          isActive
+            ? "text-primary font-semibold"
+            : "text-muted-foreground group-hover:text-primary group-hover:font-semibold"
+        }`}
+      >
+        {item.label}
+      </span>
 
-    {item.highlight && <PulsingDot />}
-    <span className="relative z-10">{item.label}</span>
+      <span
+        aria-hidden="true"
+        className={`mt-1 h-0.5 w-3 rounded-full bg-primary transition-all duration-200 ${
+          isActive
+            ? "opacity-100 scale-x-100"
+            : "opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100"
+        }`}
+      />
+    </span>
   </Link>
 );

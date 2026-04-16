@@ -11,7 +11,7 @@ export default function HultPrizeCard() {
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="relative h-64 min-h-64 overflow-hidden md:h-auto">
             <Image
-              src="/hult-price.jpg"
+              src="/hult-price.webp"
               alt="Hult Prize presenting a sustainable business model to expert judges"
               fill
               className="object-cover"

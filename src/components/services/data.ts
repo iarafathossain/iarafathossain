@@ -22,7 +22,7 @@ export const SERVICES: ServiceCard[] = [
   {
     id: 2,
     icon: MonitorSmartphone,
-    title: "Modern UI Engineering",
+    title: "Modern UI/UX Engineering",
     description:
       "Pixel-perfect, fast, and responsive interfaces that delight users on every device.",
     features: [
