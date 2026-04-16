@@ -8,7 +8,7 @@ import {
   HERO_CONTAINER_MOTION,
   HERO_ITEM_MOTION,
 } from "../shared/section-animations";
-import { BackgroundEffects } from "./background-effect";
+import SquareBGEffect from "../shared/square-bg-effect";
 import { ProfileImage } from "./profile-image";
 import { ScrollIndicator } from "./scroll-indicator";
 
@@ -56,9 +56,10 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center flex-col text-foreground font-sans selection:bg-primary/30 overflow-hidden bg-background"
+      className="relative min-h-screen flex items-center justify-center flex-col bg-muted text-foreground font-sans overflow-hidden"
     >
-      <BackgroundEffects />
+      {/* <BackgroundEffects /> */}
+      <SquareBGEffect />
       <ScrollIndicator />
 
       <motion.div
@@ -123,7 +124,7 @@ export const HeroSection = () => {
           className="mb-4 flex flex-wrap items-center justify-center gap-3"
         >
           <Link
-            href="#contact"
+            href="#projects"
             className="rounded-xl border border-primary/50 bg-primary/10 px-7 py-3 text-xl font-bold text-foreground transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground shadow-lg shadow-primary/5"
           >
             View Featured Projects
