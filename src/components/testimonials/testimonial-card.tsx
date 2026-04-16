@@ -38,6 +38,7 @@ export default function TestimonialCard({ data }: { data: Testimonial }) {
                     width={20}
                     height={14}
                     className="w-5 h-auto mt-1"
+                    style={{ height: "auto" }}
                   />
                 )}
                 <p className="text-muted-foreground text-sm">

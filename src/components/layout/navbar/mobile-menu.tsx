@@ -37,7 +37,7 @@ export const MobileMenu: React.FC<{
         aria-modal="true"
         aria-label="Navigation menu"
       >
-        <div className="px-3 py-4 flex flex-col gap-1">
+        <div className="p-4 flex flex-col gap-1">
           {NAV_ITEMS.map((item) => (
             <motion.div key={item.href} variants={mobileItemVariants}>
               <Link

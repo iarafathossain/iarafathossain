@@ -28,7 +28,10 @@ export default function SkillsSection() {
 
     const ctx = gsap.context(() => {
       gsap.from(headingRef.current, {
-        ...SECTION_GSAP_HEADING,
+        opacity: SECTION_GSAP_HEADING.opacity,
+        y: SECTION_GSAP_HEADING.y,
+        duration: SECTION_GSAP_HEADING.duration,
+        ease: SECTION_GSAP_HEADING.ease,
         scrollTrigger: {
           trigger: headingRef.current,
           start: SECTION_GSAP_HEADING.start,
@@ -37,7 +40,10 @@ export default function SkillsSection() {
       });
 
       gsap.from(coreRowRef.current, {
-        ...SECTION_GSAP_BLOCK,
+        opacity: SECTION_GSAP_BLOCK.opacity,
+        y: SECTION_GSAP_BLOCK.y,
+        duration: SECTION_GSAP_BLOCK.duration,
+        ease: SECTION_GSAP_BLOCK.ease,
         scrollTrigger: {
           trigger: coreRowRef.current,
           start: SECTION_GSAP_BLOCK.start,
@@ -62,7 +68,10 @@ export default function SkillsSection() {
       }
 
       gsap.from(exploringRef.current, {
-        ...SECTION_GSAP_BLOCK,
+        opacity: SECTION_GSAP_BLOCK.opacity,
+        y: SECTION_GSAP_BLOCK.y,
+        duration: SECTION_GSAP_BLOCK.duration,
+        ease: SECTION_GSAP_BLOCK.ease,
         scrollTrigger: {
           trigger: exploringRef.current,
           start: SECTION_GSAP_BLOCK.start,

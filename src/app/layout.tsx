@@ -1,3 +1,4 @@
+import FooterSection from "@/components/layout/footer/footer-section";
 import Navbar from "@/components/layout/navbar/navbar-section";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -43,7 +44,7 @@ export default function RootLayout({
               <Navbar />
             </header>
             <main>{children}</main>
-            <footer>Footer</footer>
+            <FooterSection />
           </TooltipProvider>
         </ThemeProvider>
       </body>

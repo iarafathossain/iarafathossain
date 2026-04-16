@@ -1,6 +1,7 @@
 "use client";
 
 import ArchitecturePatterns from "@/components/architecture/architecture-section";
+import { ContactSection } from "@/components/contact/contact-section";
 import EducationSection from "@/components/education/education-section";
 import { HeroSection } from "@/components/hero/hero-section";
 import ProfessionalMilestones from "@/components/professional-milestone/professional-milestone-section";
@@ -28,6 +29,8 @@ const HomePage = () => {
       <ProfessionalMilestones />
       {/* Education Section */}
       <EducationSection />
+      {/* Contact Section */}
+      <ContactSection />
     </main>
   );
 };

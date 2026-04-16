@@ -7,7 +7,8 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Projects", href: "#projects" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Education", href: "#education" },
-  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [

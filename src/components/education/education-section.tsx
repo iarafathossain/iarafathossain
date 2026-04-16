@@ -27,7 +27,10 @@ export default function EducationSection() {
 
     const ctx = gsap.context(() => {
       gsap.from(headingRef.current, {
-        ...SECTION_GSAP_HEADING,
+        opacity: SECTION_GSAP_HEADING.opacity,
+        y: SECTION_GSAP_HEADING.y,
+        duration: SECTION_GSAP_HEADING.duration,
+        ease: SECTION_GSAP_HEADING.ease,
         scrollTrigger: {
           trigger: headingRef.current,
           start: SECTION_GSAP_HEADING.start,
@@ -36,7 +39,10 @@ export default function EducationSection() {
       });
 
       gsap.from(academicRef.current, {
-        ...SECTION_GSAP_BLOCK,
+        opacity: SECTION_GSAP_BLOCK.opacity,
+        y: SECTION_GSAP_BLOCK.y,
+        duration: SECTION_GSAP_BLOCK.duration,
+        ease: SECTION_GSAP_BLOCK.ease,
         scrollTrigger: {
           trigger: academicRef.current,
           start: SECTION_GSAP_BLOCK.start,

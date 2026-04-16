@@ -27,7 +27,7 @@ const slideUp: Variants = {
 
 export default function ProfessionalMilestones() {
   return (
-    <SectionShell id="about" background={<SquareBGEffect />}>
+    <SectionShell background={<SquareBGEffect />}>
       <div className="space-y-12">
         <SectionHeading
           label="Beyond Coding"
