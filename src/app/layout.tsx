@@ -101,14 +101,12 @@ export const metadata: Metadata = {
     title: `${FULL_NAME} | ${JOB_TITLE}`,
     description: DESCRIPTION,
     images: [PROFILE_IMAGE],
-    creator: "@iarafathossain", // update if you have a Twitter handle
+    creator: "@iarafathossaini",
   },
 
   // ── Verification (add your tokens once you verify in Search Console) ──
   verification: {
     google: "et8To98ur-21h4TQ77MnKurS2tOW0cYNkj7CMHM_BEg",
-    // yandex: "...",
-    // bing:   "...",
   },
 
   // ── Favicons / App icons ──────────────────────────────────────────────
