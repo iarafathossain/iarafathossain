@@ -8,13 +8,14 @@ import {
   useScroll,
 } from "framer-motion";
 import { ArrowUp } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
+import { ResumeButton } from "../../shared/resume-button";
 import { BrandLogo } from "./brand-logo";
 import { NAV_ITEMS, SOCIAL_LINKS } from "./data";
 import { DesktopNavLink } from "./desktop-nav-link";
 import { HamburgerButton } from "./hamburger-button";
 import { MobileMenu } from "./mobile-menu";
-import { ResumeButton } from "./resume-button";
 import { SocialButton } from "./social-button";
 
 export const Navbar: React.FC = () => {
@@ -22,6 +23,7 @@ export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [activeHref, setActiveHref] = useState<string>("");
   const [showHeroJump, setShowHeroJump] = useState<boolean>(false);
+  const pathname = usePathname();
 
   const { scrollY } = useScroll();
 
@@ -32,11 +34,23 @@ export const Navbar: React.FC = () => {
 
   useEffect(() => {
     const resolveActiveNav = () => {
+      if (pathname === "/about") {
+        setActiveHref("/about");
+        return;
+      }
+
       const activationLine = window.scrollY + window.innerHeight * 0.4;
       let currentHref = "";
 
       for (const item of NAV_ITEMS) {
-        const sectionId = item.href.replace("#", "");
+        if (!item.href.includes("#")) {
+          continue;
+        }
+
+        const sectionId = item.href.split("#")[1]?.replace(/^\//, "");
+        if (!sectionId) {
+          continue;
+        }
         const sectionElement = document.getElementById(sectionId);
 
         if (!sectionElement) {
@@ -69,7 +83,7 @@ export const Navbar: React.FC = () => {
       window.removeEventListener("resize", resolveActiveNav);
       window.removeEventListener("hashchange", resolveActiveNav);
     };
-  }, []);
+  }, [pathname]);
 
   const closeMobileMenu = useCallback(() => setMobileOpen(false), []);
   const toggleMobileMenu = useCallback(() => setMobileOpen((v) => !v), []);

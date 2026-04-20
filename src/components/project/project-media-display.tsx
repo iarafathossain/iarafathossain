@@ -8,6 +8,7 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import { Circle, Images, Play } from "lucide-react";
+import Image from "next/image";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Project } from "./interface";
 
@@ -170,14 +171,16 @@ export default function ProjectMediaDisplay({
                 exit="exit"
                 className="absolute inset-0 w-full overflow-y-hidden"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={project.fullPageImageUrlArray[currentIndex]}
-                  alt={`${project.title} screenshot ${currentIndex + 1}`}
-                  className="w-full object-cover object-top"
-                  style={{ height: "auto", minHeight: "100%" }}
-                  draggable={false}
-                />
+                <div className="relative w-full h-full">
+                  <Image
+                    src={project.fullPageImageUrlArray[currentIndex]}
+                    alt={`${project.title} screenshot ${currentIndex + 1}`}
+                    fill
+                    sizes="100vh"
+                    className="object-cover object-top"
+                    draggable={false}
+                  />
+                </div>
               </motion.div>
             </AnimatePresence>
 

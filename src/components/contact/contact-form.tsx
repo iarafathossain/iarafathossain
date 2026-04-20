@@ -184,23 +184,18 @@ const ContactForm: React.FC = () => {
         >
           <div className="text-sm text-muted-foreground">
             <span className="font-medium text-foreground block">Email</span>
-            <a
-              href="mailto:arafat24official@gmail.com"
-              className="text-primary hover:underline select-none"
-            >
+            <span className="text-primary select-none">
               arafat24official@gmail.com
-            </a>
+            </span>
           </div>
           <div className="text-sm text-muted-foreground">
             <span className="font-medium text-foreground block">WhatsApp</span>
-            <a
-              href="https://wa.me/01870577034"
-              className="text-primary hover:underline select-none"
-              target="_blank"
+            <span
+              className="text-primary select-none"
               rel="noopener noreferrer"
             >
               +8801870577034
-            </a>
+            </span>
           </div>
         </motion.div>
       </form>

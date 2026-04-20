@@ -39,8 +39,6 @@ export default function HultPrizeCard() {
             <div>
               <h3 className="text-2xl font-bold leading-tight tracking-tight text-foreground md:text-3xl">
                 Hult Prize
-                <br />
-                Runner-Up
               </h3>
               <p className="mt-1.5 text-sm font-medium tracking-wide text-primary">
                 University Level Competition
