@@ -1,5 +1,3 @@
-// src/app/layout.tsx
-
 import FooterSection from "@/components/layout/footer/footer-section";
 import Navbar from "@/components/layout/navbar/navbar-section";
 import { ThemeProvider } from "@/components/theme-provider";
