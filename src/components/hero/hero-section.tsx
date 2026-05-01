@@ -56,7 +56,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center flex-col bg-muted text-foreground font-sans overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center flex-col bg-muted text-foreground overflow-hidden pt-20"
     >
       {/* <BackgroundEffects /> */}
       <SquareBGEffect />

@@ -3,7 +3,7 @@ import React from "react";
 
 export const BrandLogo: React.FC<{ onClick?: () => void }> = ({ onClick }) => (
   <Link
-    href="/"
+    href="/#hero"
     onClick={onClick}
     className="shrink-0 font-mono text-lg font-bold tracking-normal text-foreground hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 rounded-sm"
     aria-label="arafathossain — home"

@@ -100,7 +100,7 @@ export const Navbar: React.FC = () => {
   return (
     <MotionConfig reducedMotion="user">
       <div
-        className={`fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none transition-all duration-150 ease-out py-5 ${
+        className={`fixed top-0 left-0 right-0 z-50 pointer-events-none transition-all duration-150 ease-out h-16 flex justify-center items-center ${
           isScrolled
             ? "bg-background/60 backdrop-blur-md shadow-xs shadow-primary/20"
             : "bg-transparent shadow-none"

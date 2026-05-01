@@ -29,7 +29,7 @@ export const MobileMenu: React.FC<{
         className="
           absolute top-[calc(100%+10px)] left-0 right-0 mx-2
           rounded-2xl overflow-hidden
-          bg-background/80 backdrop-blur-xl
+          bg-background/90 backdrop-blur-3xl
           border border-border/60
           shadow-[0_20px_60px_-10px_rgba(0,0,0,0.6)]
         "

@@ -104,13 +104,13 @@ const FooterSection = () => {
                 Interested in collaborating? Let&apos;s discuss your next
                 project.
               </p>
-              <a
-                href="#contact"
+              <Link
+                href="/#contact"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors duration-200 group"
               >
                 Start Conversation
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

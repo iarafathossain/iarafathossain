@@ -10,7 +10,7 @@ import {
   Layers,
   Server,
 } from "lucide-react";
-import SkillBadge from "../skill/skill-badge";
+import { Tag } from "../shared/tag";
 import GlowButton from "./glow-button";
 import { Project } from "./interface";
 import ProjectMediaDisplay from "./project-media-display";
@@ -52,9 +52,16 @@ export default function HeroProject({ project }: { project: Project }) {
           </h3>
         </div>
 
-        <p className="text-muted-foreground text-base leading-relaxed max-w-lg">
-          {project.description}
-        </p>
+        <ul className="list-disc pl-5 space-y-1">
+          {project.highlights.map((h, i) => (
+            <li
+              key={i}
+              className="text-muted-foreground text-base leading-relaxed"
+            >
+              {h}
+            </li>
+          ))}
+        </ul>
 
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-1.5">
@@ -64,7 +71,7 @@ export default function HeroProject({ project }: { project: Project }) {
             </div>
             <div className="flex flex-wrap gap-1.5">
               {project.frontendStack.map((t) => (
-                <SkillBadge key={t.name} skill={t} />
+                <Tag key={t.id} text={t.name} />
               ))}
             </div>
           </div>
@@ -75,7 +82,7 @@ export default function HeroProject({ project }: { project: Project }) {
             </div>
             <div className="flex flex-wrap gap-1.5">
               {project.backendStack.map((t) => (
-                <SkillBadge key={t.name} skill={t} />
+                <Tag key={t.id} text={t.name} />
               ))}
             </div>
           </div>

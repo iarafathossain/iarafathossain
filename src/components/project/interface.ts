@@ -1,14 +1,11 @@
-import { ISkill } from "../skill/interface";
-
 export interface Project {
   id: string;
   title: string;
   type: "Full Stack";
-  description: string;
+  highlights: string[];
   videoUrl: string;
-  fullPageImageUrlArray: string[];
-  frontendStack: ISkill[];
-  backendStack: ISkill[];
+  frontendStack: { id: number; name: string }[];
+  backendStack: { id: number; name: string }[];
   liveUrl: string;
   githubUrlFrontend: string;
   githubUrlBackend: string;

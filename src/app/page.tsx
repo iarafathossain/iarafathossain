@@ -1,5 +1,3 @@
-"use client";
-
 import ArchitecturePatterns from "@/components/architecture/architecture-section";
 import { ContactSection } from "@/components/contact/contact-section";
 import EducationSection from "@/components/education/education-section";

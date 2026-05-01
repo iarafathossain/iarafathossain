@@ -8,8 +8,10 @@ import {
   BookOpen,
   ExternalLink,
   Code as Github,
+  Layers,
+  Server,
 } from "lucide-react";
-import SkillBadge from "../skill/skill-badge";
+import { Tag } from "../shared/tag";
 import GlowButton from "./glow-button";
 import { Project } from "./interface";
 import ProjectMediaDisplay from "./project-media-display";
@@ -82,17 +84,40 @@ export default function SecondaryProjectCard({
             </div>
           </div>
 
-          <p className="text-muted-foreground text-base leading-relaxed line-clamp-3">
-            {project.description}
-          </p>
-
-          <div className="flex flex-wrap gap-1.5">
-            {[
-              ...project.frontendStack.slice(0, 3),
-              ...project.backendStack.slice(0, 3),
-            ].map((t) => (
-              <SkillBadge key={t.name} skill={t} />
+          <ul className="list-disc pl-5 space-y-1">
+            {project.highlights.map((h, i) => (
+              <li
+                key={i}
+                className="text-muted-foreground text-base leading-relaxed"
+              >
+                {h}
+              </li>
             ))}
+          </ul>
+
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+                <Layers className="w-3 h-3" />
+                Frontend
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {project.frontendStack.map((t) => (
+                  <Tag key={t.id} text={t.name} />
+                ))}
+              </div>
+            </div>
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+                <Server className="w-3 h-3" />
+                Backend
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {project.backendStack.map((t) => (
+                  <Tag key={t.id} text={t.name} />
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="flex-1" />
