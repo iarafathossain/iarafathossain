@@ -1,5 +1,6 @@
 "use client";
 
+import { ResumeButton } from "@/components/shared/resume-button";
 import {
   AnimatePresence,
   motion,
@@ -10,7 +11,6 @@ import {
 import { ArrowUp } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
-import { ResumeButton } from "../../shared/resume-button";
 import { BrandLogo } from "./brand-logo";
 import { NAV_ITEMS, SOCIAL_LINKS } from "./data";
 import { DesktopNavLink } from "./desktop-nav-link";

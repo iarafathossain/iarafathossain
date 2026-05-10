@@ -5,11 +5,13 @@ import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   BookOpen,
+  Code,
   ExternalLink,
   Code as Github,
   Layers,
   Server,
 } from "lucide-react";
+import Link from "next/link";
 import { Tag } from "../shared/tag";
 import GlowButton from "./glow-button";
 import { Project } from "./interface";
@@ -21,7 +23,6 @@ export default function HeroProject({ project }: { project: Project }) {
       <div className="w-full">
         <ProjectMediaDisplay project={project} viewportHeight="440px" />
       </div>
-
       <div className="flex flex-col gap-5">
         <div>
           <div className="flex items-center gap-2 mb-3">
@@ -33,12 +34,6 @@ export default function HeroProject({ project }: { project: Project }) {
               }}
             >
               {project.type}
-            </Badge>
-            <Badge
-              variant="outline"
-              className="text-xs font-semibold tracking-[0.12em] uppercase px-2.5 py-1 rounded-md border-border text-muted-foreground"
-            >
-              Hero Project
             </Badge>
           </div>
 
@@ -92,65 +87,84 @@ export default function HeroProject({ project }: { project: Project }) {
 
         <div className="flex flex-wrap items-center gap-2.5">
           <GlowButton href={project.liveUrl}>
-            <ExternalLink className="w-3.5 h-3.5" />
             Live Site
+            <ExternalLink className="w-3.5 h-3.5" />
           </GlowButton>
 
-          <GlowButton
-            href={project.githubUrlFrontend}
-            variant="outline"
-            accent={project.accentColor}
-          >
-            <Github className="w-3.5 h-3.5" />
-            Frontend
-          </GlowButton>
+          {project.githubUrlFrontend && (
+            <GlowButton
+              href={project.githubUrlFrontend}
+              variant="outline"
+              accent={project.accentColor}
+            >
+              Frontend
+              <Github className="w-3.5 h-3.5" />
+            </GlowButton>
+          )}
 
-          <GlowButton
-            href={project.githubUrlBackend}
-            variant="outline"
-            accent={project.accentColor}
-          >
-            <Github className="w-3.5 h-3.5" />
-            Backend
-          </GlowButton>
+          {project.githubUrlBackend && (
+            <GlowButton
+              href={project.githubUrlBackend}
+              variant="outline"
+              accent={project.accentColor}
+            >
+              Backend
+              <Github className="w-3.5 h-3.5" />
+            </GlowButton>
+          )}
+
+          {project.sourceCode && (
+            <GlowButton
+              href={project.sourceCode}
+              variant="outline"
+              accent={project.accentColor}
+            >
+              Source Code
+              <Code className="w-3.5 h-3.5" />
+            </GlowButton>
+          )}
         </div>
 
-        <motion.a
-          href={project.deepDiveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ x: 4 }}
-          transition={{ type: "spring", stiffness: 400, damping: 20 }}
-          className="group inline-flex items-center gap-2.5 self-start"
-        >
-          <span
-            className="flex items-center justify-center w-8 h-8 rounded-lg transition-all duration-200 group-hover:scale-110"
-            style={{
-              background: `color-mix(in oklch, ${project.accentColor} 12%, transparent)`,
-              border: `1px solid color-mix(in oklch, ${project.accentColor} 18%, transparent)`,
-            }}
+        {project.deepDiveUrl && (
+          <motion.div
+            whileHover={{ x: 4 }}
+            transition={{ type: "spring", stiffness: 400, damping: 20 }}
+            className="group inline-flex items-center gap-2.5 self-start"
           >
-            <BookOpen
-              className="w-3.5 h-3.5"
-              style={{ color: project.accentColor }}
-            />
-          </span>
-          <span className="flex flex-col">
-            <span
-              className="text-sm font-semibold group-hover:underline underline-offset-2"
-              style={{ color: project.accentColor }}
+            <Link
+              href={project.deepDiveUrl}
+              className="inline-flex items-center gap-2.5"
             >
-              Read the Technical Deep Dive
-            </span>
-            <span className="text-xs text-muted-foreground">
-              Architecture · Decisions · Challenges
-            </span>
-          </span>
-          <ArrowUpRight
-            className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-all duration-200"
-            style={{ color: project.accentColor }}
-          />
-        </motion.a>
+              <span
+                className="flex items-center justify-center w-8 h-8 rounded-lg transition-all duration-200 group-hover:scale-110"
+                style={{
+                  background: `color-mix(in oklch, ${project.accentColor} 12%, transparent)`,
+                  border: `1px solid color-mix(in oklch, ${project.accentColor} 18%, transparent)`,
+                }}
+              >
+                <BookOpen
+                  className="w-3.5 h-3.5"
+                  style={{ color: project.accentColor }}
+                />
+              </span>
+              <span className="flex flex-col">
+                <span
+                  className="text-sm font-semibold group-hover:underline underline-offset-2"
+                  style={{ color: project.accentColor }}
+                >
+                  Read the Technical Deep Dive
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  Architecture · Decisions · Challenges
+                </span>
+              </span>
+              <ArrowUpRight
+                className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-all duration-200"
+                style={{ color: project.accentColor }}
+              />
+            </Link>
+          </motion.div>
+        )}
       </div>
     </div>
   );

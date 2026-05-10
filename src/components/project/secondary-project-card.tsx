@@ -3,14 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  BookOpen,
-  ExternalLink,
-  Code as Github,
-  Layers,
-  Server,
-} from "lucide-react";
+import { ExternalLink, Code as Github, Layers, Server } from "lucide-react";
 import { Tag } from "../shared/tag";
 import GlowButton from "./glow-button";
 import { Project } from "./interface";
@@ -130,51 +123,43 @@ export default function SecondaryProjectCard({
               accent={project.accentColor}
               compact
             >
-              <ExternalLink className="w-3 h-3" />
               Live
+              <ExternalLink className="w-3 h-3" />
             </GlowButton>
-            <GlowButton
-              href={project.githubUrlFrontend}
-              variant="outline"
-              accent={project.accentColor}
-              compact
-            >
-              <Github className="w-3 h-3" />
-              FE
-            </GlowButton>
-            <GlowButton
-              href={project.githubUrlBackend}
-              variant="outline"
-              accent={project.accentColor}
-              compact
-            >
-              <Github className="w-3 h-3" />
-              BE
-            </GlowButton>
+            {project.githubUrlFrontend && (
+              <GlowButton
+                href={project.githubUrlFrontend}
+                variant="outline"
+                accent={project.accentColor}
+                compact
+              >
+                Frontend
+                <Github className="w-3 h-3" />
+              </GlowButton>
+            )}
+            {project.githubUrlBackend && (
+              <GlowButton
+                href={project.githubUrlBackend}
+                variant="outline"
+                accent={project.accentColor}
+                compact
+              >
+                Backend
+                <Github className="w-3 h-3" />
+              </GlowButton>
+            )}
 
-            <motion.a
-              href={project.deepDiveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ x: 2 }}
-              transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              className="group ml-auto flex items-center gap-1 text-sm font-semibold transition-colors duration-150"
-              style={{
-                color: `color-mix(in oklch, ${project.accentColor} 80%, transparent)`,
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.color =
-                  project.accentColor;
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.color =
-                  `color-mix(in oklch, ${project.accentColor} 80%, transparent)`;
-              }}
-            >
-              <BookOpen className="w-3 h-3" />
-              Deep Dive
-              <ArrowUpRight className="w-2.5 h-2.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </motion.a>
+            {project.sourceCode && (
+              <GlowButton
+                href={project.sourceCode}
+                variant="outline"
+                accent={project.accentColor}
+                compact
+              >
+                Source Code
+                <Github className="w-3 h-3" />
+              </GlowButton>
+            )}
           </div>
         </CardContent>
       </Card>

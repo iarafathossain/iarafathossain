@@ -4,11 +4,12 @@ export interface Project {
   type: "Full Stack";
   highlights: string[];
   videoUrl: string;
-  frontendStack: { id: number; name: string }[];
-  backendStack: { id: number; name: string }[];
+  frontendStack: { id: string; name: string }[];
+  backendStack: { id: string; name: string }[];
+  sourceCode?: string;
   liveUrl: string;
-  githubUrlFrontend: string;
-  githubUrlBackend: string;
-  deepDiveUrl: string;
+  githubUrlFrontend?: string;
+  githubUrlBackend?: string;
+  deepDiveUrl?: string;
   accentColor: string;
 }

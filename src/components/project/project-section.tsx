@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -84,9 +85,25 @@ export default function ProjectsSection() {
           description="End-to-end products shipped with care — from schema design to deployment pipeline."
         />
 
-        <div ref={heroRef}>
+        <motion.div
+          whileHover={{ y: -4 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLElement).style.setProperty(
+              "--card-glow",
+              `color-mix(in oklch, var(--primary) 10%, transparent)`,
+            );
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLElement).style.setProperty(
+              "--card-glow",
+              "transparent",
+            );
+          }}
+          ref={heroRef}
+        >
           <div
-            className="relative rounded-2xl border border-border/50 bg-card/40 backdrop-blur-sm p-6 sm:p-8 xl:p-10 overflow-hidden"
+            className="relative rounded-2xl border border-border/50 bg-card/40 backdrop-blur-sm p-6 sm:p-8 xl:p-10 overflow-hidden ring-1 ring-border/50 hover:border-primary/30 hover:ring-primary/30 hover:shadow-primary/10 transition-all duration-300"
             style={{
               boxShadow:
                 "inset 0 1px 0 color-mix(in oklch, var(--primary) 5%, transparent), 0 2px 60px 0 color-mix(in oklch, var(--primary) 5%, transparent)",
@@ -103,15 +120,7 @@ export default function ProjectsSection() {
 
             <HeroProject project={hero} />
           </div>
-        </div>
-
-        <div className="relative flex items-center gap-4">
-          <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-transparent" />
-          <span className="text-muted-foreground text-sm tracking-widest uppercase font-mono shrink-0">
-            More Projects
-          </span>
-          <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-transparent" />
-        </div>
+        </motion.div>
 
         <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {secondaryProjects.map((project) => (

@@ -225,16 +225,15 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-      </head>
-      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
-        {/* JSON-LD structured data injected into <head> via next/script */}
+        {/* JSON-LD structured data for SEO */}
         <Script
           id="json-ld-person"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           strategy="beforeInteractive"
         />
-
+      </head>
+      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
