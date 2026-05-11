@@ -4,11 +4,9 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 
-const RESUME_HREF = "/resume.pdf";
-
 export const ResumeButton: React.FC = () => (
   <motion.a
-    href={RESUME_HREF}
+    href="https://drive.google.com/file/d/1VWb68Tdp5kESPW7gpfKa39T8Bky0YArg/view?usp=sharing"
     target="_blank"
     rel="noopener noreferrer"
     whileHover={{ scale: 1.05 }}

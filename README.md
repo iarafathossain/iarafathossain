@@ -89,27 +89,6 @@ Deepening my skills in modern full-stack development with a focus on:
 
 ---
 
-## 🚀 Projects
-
-| Project        | Description                                                                                                                                           | Technologies                                                                  | Live                                  | Source Code                                                                                  | Preview                                                             |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| **ParcelKoy**  | Full-stack courier logistics platform managing parcel delivery lifecycle, role-based dashboards for 4 roles, and Gemini AI agent integration          | Next.js, TypeScript, Express.js, PostgreSQL, Prisma, Gemini AI, Vercel AI SDK | [Live](https://parcelkoy.vercel.app)  | [Frontend](https://github.com/iarafathossain) · [Backend](https://github.com/iarafathossain) | ![ParcelKoy](https://placehold.co/300x180?text=ParcelKoy+Preview)   |
-| **EduConnect** | Production-ready LMS connecting learners with expert tutors, featuring AI-powered semantic search, vector recommendations, and auto-progress tracking | Next.js, TypeScript, Node.js, MongoDB, Vercel AI SDK, Vector Search           | [Live](https://educonnect.vercel.app) | [GitHub](https://github.com/iarafathossain)                                                  | ![EduConnect](https://placehold.co/300x180?text=EduConnect+Preview) |
-
----
-
-## 📜 Certifications
-
-| Certificate                        | Platform         | Preview                                                        |
-| ---------------------------------- | ---------------- | -------------------------------------------------------------- |
-| Full Stack Web Development Level-2 | Programming Hero | ![Cert](https://placehold.co/300x200?text=Certificate+Preview) |
-| AI Engineering Path                | Scrimba          | ![Cert](https://placehold.co/300x200?text=Certificate+Preview) |
-| Advanced JavaScript                | Scrimba          | ![Cert](https://placehold.co/300x200?text=Certificate+Preview) |
-| React & Next.js Mastery            | Scrimba          | ![Cert](https://placehold.co/300x200?text=Certificate+Preview) |
-| UI/UX Engineering                  | Scrimba          | ![Cert](https://placehold.co/300x200?text=Certificate+Preview) |
-
----
-
 ## 📊 GitHub Stats
 
 <div align="center">
@@ -122,13 +101,35 @@ Deepening my skills in modern full-stack development with a focus on:
 
 </div>
 
----
-
 ## 🏆 GitHub Trophies
 
 <div align="center">
 
 ![Trophies](https://github-profile-trophy.vercel.app/?username=iarafathossain&theme=tokyonight&no-frame=true&row=1&column=6)
+
+---
+
+## 🚀 Projects
+
+| Project        | Description                                                                                                                                           | Technologies                                                                  | Live                                  | Source Code                                                                                  | Preview                                                                                                                  |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **ParcelKoy**  | Full-stack courier logistics platform managing parcel delivery lifecycle, role-based dashboards for 4 roles, and Gemini AI agent integration          | Next.js, TypeScript, Express.js, PostgreSQL, Prisma, Gemini AI, Vercel AI SDK | [Live](https://parcelkoy.vercel.app)  | [Frontend](https://github.com/iarafathossain) · [Backend](https://github.com/iarafathossain) | ![ParcelKoy](https://res.cloudinary.com/dlswlzccr/image/upload/v1778423627/certificates/parcel-koy-hero-img_bgv6zz.webp) |
+| **EduConnect** | Production-ready LMS connecting learners with expert tutors, featuring AI-powered semantic search, vector recommendations, and auto-progress tracking | Next.js, TypeScript, Node.js, MongoDB, Vercel AI SDK, Vector Search           | [Live](https://educonnect.vercel.app) | [GitHub](https://github.com/iarafathossain)                                                  | ![EduConnect](https://placehold.co/300x180?text=EduConnect+Preview)                                                      |
+
+---
+
+## 📜 Certifications
+
+| Certificate                        | Platform          | Preview                                                                                                                     |
+| ---------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Full Stack Web Development Level-2 | Programming Hero  | ![Cert](https://placehold.co/300x200?text=Certificate+Preview)                                                              |
+| AI Engineering Path                | Scrimba           | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422576/certificates/ai-engineering-path_ivyl8g.webp)         |
+| Advanced JavaScript                | Scrimba           | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422576/certificates/advanced-javascript_i4e8qs.webp)         |
+| Programming with JavaScript        | Coursera (Meta)   | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422580/certificates/programming-with-js-by-meta_qcvjff.webp) |
+| React & Next.js Mastery            | Learn With Sumith | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422577/certificates/reactive-accelaerator_nbknqh.webp)       |
+| UI/UX Engineering                  | Scrimba           | ![Cert](https://placehold.co/300x200?text=Certificate+Preview)                                                              |
+
+---
 
 </div>
 

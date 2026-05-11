@@ -38,7 +38,7 @@ export const SERVICES: ServiceCard[] = [
     description:
       "Robust and secure backend systems designed for scale, correctness, and maintainability.",
     features: [
-      { text: "REST / GraphQL APIs" },
+      { text: "REST APIs Design" },
       { text: "Database design" },
       { text: "Authentication & security" },
     ],

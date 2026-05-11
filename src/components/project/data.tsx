@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
       "Integrated a Gemini AI using Vercel AI SDK and tool-calling",
       "Full-stack architecture: Express.js modular backend with Next.js service layer → server actions → client data flow.",
     ],
-    videoUrl: "https://www.youtube.com/watch?v=3o3RtMysLV0",
+    videoUrl: "https://youtu.be/IklS_Rqex-E",
     frontendStack: [
       { id: "parcel-koy-frontend-tech-1", name: "Next.js" },
       { id: "parcel-koy-frontend-tech-2", name: "Tailwind CSS" },
