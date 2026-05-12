@@ -47,11 +47,7 @@ export default function SecondaryProjectCard({
         />
 
         <div className="px-4 pt-4 shrink-0">
-          <ProjectMediaDisplay
-            project={project}
-            viewportHeight="260px"
-            compact
-          />
+          <ProjectMediaDisplay project={project} />
         </div>
 
         <CardContent className="flex flex-col gap-4 p-5 flex-1">

@@ -62,13 +62,10 @@ function BrowserChrome({
 
 export type ProjectMediaDisplayProps = {
   project: Project;
-  viewportHeight?: string;
-  compact?: boolean;
 };
 
 export default function ProjectMediaDisplay({
   project,
-  viewportHeight = "420px",
 }: ProjectMediaDisplayProps) {
   const youtubeVideoId = getYouTubeVideoId(project.videoUrl);
 
@@ -77,13 +74,10 @@ export default function ProjectMediaDisplay({
       url={project.liveUrl.replace("https://", "")}
       accent={project.accentColor}
     >
-      <div
-        className="w-full bg-background overflow-hidden"
-        style={{ height: viewportHeight }}
-      >
+      <div className="w-full bg-background overflow-hidden aspect-video rounded-b-md">
         {youtubeVideoId ? (
           <iframe
-            src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&mute=1&controls=1&rel=0`}
+            src={`https://www.youtube.com/embed/${youtubeVideoId}?controls=1&rel=0`}
             title={`${project.title} demo video`}
             className="h-full w-full"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -93,9 +87,6 @@ export default function ProjectMediaDisplay({
           <video
             key={project.videoUrl}
             src={project.videoUrl}
-            autoPlay
-            muted
-            loop
             playsInline
             controls
             className="w-full h-full object-cover"

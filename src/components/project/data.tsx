@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
       "Integrated an AI support chatbot for real-time query handling, reducing repetitive support requests.",
       "Engineered multi-step course creation forms with DB persistence and resume-from-state for interrupted workflows.",
     ],
-    videoUrl: "https://www.youtube.com/watch?v=3o3RtMysLV0",
+    videoUrl: "https://youtu.be/IklS_Rqex-E",
     frontendStack: [
       { id: "educonnect-frontend-tech-1", name: "next.js" },
       { id: "educonnect-frontend-tech-2", name: "tailwind css" },

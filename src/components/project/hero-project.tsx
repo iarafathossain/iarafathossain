@@ -19,9 +19,9 @@ import ProjectMediaDisplay from "./project-media-display";
 
 export default function HeroProject({ project }: { project: Project }) {
   return (
-    <div className="hero-project grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12 items-center">
+    <div className="hero-project grid grid-cols-1 gap-8 xl:gap-12 items-center">
       <div className="w-full">
-        <ProjectMediaDisplay project={project} viewportHeight="440px" />
+        <ProjectMediaDisplay project={project} />
       </div>
       <div className="flex flex-col gap-5">
         <div>
@@ -135,7 +135,7 @@ export default function HeroProject({ project }: { project: Project }) {
               href={project.deepDiveUrl}
               className="inline-flex items-center gap-2.5"
             >
-              <span
+              <div
                 className="flex items-center justify-center w-8 h-8 rounded-lg transition-all duration-200 group-hover:scale-110"
                 style={{
                   background: `color-mix(in oklch, ${project.accentColor} 12%, transparent)`,
@@ -146,8 +146,8 @@ export default function HeroProject({ project }: { project: Project }) {
                   className="w-3.5 h-3.5"
                   style={{ color: project.accentColor }}
                 />
-              </span>
-              <span className="flex flex-col">
+              </div>
+              <div className="flex flex-col">
                 <span
                   className="text-sm font-semibold group-hover:underline underline-offset-2"
                   style={{ color: project.accentColor }}
@@ -157,7 +157,7 @@ export default function HeroProject({ project }: { project: Project }) {
                 <span className="text-xs text-muted-foreground">
                   Architecture · Decisions · Challenges
                 </span>
-              </span>
+              </div>
               <ArrowUpRight
                 className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-all duration-200"
                 style={{ color: project.accentColor }}
