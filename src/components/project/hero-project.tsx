@@ -7,6 +7,7 @@ import {
   BookOpen,
   Code,
   ExternalLink,
+  FileText,
   Code as Github,
   Layers,
   Server,
@@ -123,6 +124,15 @@ export default function HeroProject({ project }: { project: Project }) {
               <Code className="w-3.5 h-3.5" />
             </GlowButton>
           )}
+
+          <GlowButton
+            href="https://parcel-koy-backend-1.onrender.com/"
+            variant="outline"
+            accent={project.accentColor}
+          >
+            API Documentation
+            <FileText className="w-3.5 h-3.5" />
+          </GlowButton>
         </div>
 
         {project.deepDiveUrl && (

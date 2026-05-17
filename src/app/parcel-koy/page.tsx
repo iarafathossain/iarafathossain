@@ -219,25 +219,6 @@ const ParcelKoyPage = () => {
             <Button
               asChild
               size="default"
-              variant="outline"
-              className="rounded-full px-5"
-            >
-              <Link
-                href={
-                  parcelProject.githubUrlFrontend ??
-                  parcelProject.githubUrlBackend ??
-                  parcelProject.liveUrl
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub Repo
-                <GithubIcon className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="default"
               variant="ghost"
               className="rounded-full px-5"
             >
@@ -320,6 +301,15 @@ const ParcelKoyPage = () => {
 
         <Divider />
 
+        {/* Backend Live site by iframe */}
+        <div className="mt-8">
+          <iframe
+            src="https://parcel-koy-backend-1.onrender.com/"
+            className="w-full h-96 rounded-lg border border-border/60"
+            title="Backend Live Site"
+          />
+        </div>
+
         {/* ══════════════════════════════════════════
             OVERVIEW
         ══════════════════════════════════════════ */}
@@ -351,7 +341,7 @@ const ParcelKoyPage = () => {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+                  <p className="text-base leading-relaxed text-muted-foreground">
                     {item}
                   </p>
                 </div>
@@ -369,7 +359,7 @@ const ParcelKoyPage = () => {
                 key={item}
                 className="rounded-2xl border border-border/60 bg-card/80 p-4"
               >
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <p className="text-base leading-relaxed text-muted-foreground">
                   {item}
                 </p>
               </div>
@@ -397,11 +387,11 @@ const ParcelKoyPage = () => {
           <div className="space-y-6">
             {/* Frontend */}
             <div className="space-y-3">
-              <p className="text-sm font-semibold text-foreground">
+              <p className="text-base font-semibold text-foreground">
                 Frontend — Next.js
               </p>
               <div className="rounded-2xl border border-primary/15 bg-primary/5 px-4 py-3">
-                <p className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">
+                <p className="text-sm font-semibold tracking-[0.2em] text-primary uppercase">
                   Service Layer → Server Actions → Client Data Flow
                 </p>
               </div>
@@ -414,7 +404,7 @@ const ParcelKoyPage = () => {
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-background text-xs font-semibold text-primary ring-1 ring-primary/20">
                       {i + 1}
                     </span>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       {item}
                     </p>
                   </div>
@@ -424,7 +414,7 @@ const ParcelKoyPage = () => {
 
             {/* Backend */}
             <div className="space-y-3">
-              <p className="text-sm font-semibold text-foreground">
+              <p className="text-base font-semibold text-foreground">
                 Backend — Modular Express
               </p>
               <div className="space-y-2">
@@ -436,7 +426,7 @@ const ParcelKoyPage = () => {
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-background text-xs font-semibold text-primary ring-1 ring-primary/20">
                       {i + 1}
                     </span>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       {item}
                     </p>
                   </div>

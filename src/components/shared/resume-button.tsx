@@ -6,7 +6,7 @@ import React from "react";
 
 export const ResumeButton: React.FC = () => (
   <motion.a
-    href="https://drive.google.com/file/d/1VWb68Tdp5kESPW7gpfKa39T8Bky0YArg/view?usp=sharing"
+    href="https://drive.google.com/file/d/1UQZWfMMoJ7xxN2rTHMJy2Yffx2J_i2uU/view?usp=sharing"
     target="_blank"
     rel="noopener noreferrer"
     whileHover={{ scale: 1.05 }}

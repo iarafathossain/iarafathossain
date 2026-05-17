@@ -104,7 +104,7 @@ export const HeroSection = () => {
           className="mb-6 flex flex-wrap items-center justify-center gap-2"
         >
           <span className="rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-md font-semibold text-secondary-foreground backdrop-blur-sm">
-            Full Stack Web Developer
+            Full Stack Software Developer
           </span>
           <span className="rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-md font-semibold text-secondary-foreground backdrop-blur-sm">
             Tech + Business Enthusiast
