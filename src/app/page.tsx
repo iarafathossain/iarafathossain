@@ -6,7 +6,6 @@ import ProfessionalMilestones from "@/components/professional-milestone/professi
 import ProjectsSection from "@/components/project/project-section";
 import ServicesSection from "@/components/services/services-section";
 import SkillsSection from "@/components/skill/skill-section";
-import TestimonialsRedesign from "@/components/testimonials/testimonial-section";
 
 const HomePage = () => {
   return (
@@ -21,8 +20,6 @@ const HomePage = () => {
       <ArchitecturePatterns />
       {/* Projects Section */}
       <ProjectsSection />
-      {/* Testimonials Section */}
-      <TestimonialsRedesign />
       {/* Professional Milestones Section */}
       <ProfessionalMilestones />
       {/* Education Section */}
