@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
       { id: "parcel-koy-backend-tech-6", name: "TypeScript" },
       { id: "parcel-koy-backend-tech-7", name: "Modular Architecture" },
     ],
-    liveUrl: "https://parcel-koy-frontend.vercel.app/",
+    liveUrl: "https://parcelkoy.live/",
     githubUrlFrontend: "https://github.com/iarafathossain/parcel-koy-frontend",
     githubUrlBackend: "https://github.com/iarafathossain/parcel-koy-backend",
     deepDiveUrl: "/parcel-koy",

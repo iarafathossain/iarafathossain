@@ -135,10 +135,13 @@ export const BENTO_CATEGORIES: IBentoCategory[] = [
     colSpan: "single",
   },
   {
-    title: "Tools & Workflow",
+    title: "Tools & DevOps",
     icon: <Workflow className="w-4 h-4" />,
     skills: [
       { name: "Git & GitHub", icon: <GithubIcon className="w-4 h-4" /> },
+      { name: "Docker", icon: <Container className="w-4 h-4" /> },
+      { name: "DNS & Domain Management", icon: <Server className="w-4 h-4" /> },
+      { name: "Vercel & Render", icon: <Cloud className="w-4 h-4" /> },
       { name: "Postman", icon: <PostmanIcon className="w-4 h-4" /> },
       { name: "VS Code", icon: <VsCodeIcon className="w-4 h-4" /> },
       { name: "Figma", icon: <FigmaIcon className="w-4 h-4" /> },
