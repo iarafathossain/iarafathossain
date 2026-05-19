@@ -62,7 +62,7 @@ export const PROJECTS: Project[] = [
       { id: "farmfresh-tech-3", name: "mongoDB/mongoose" },
       { id: "farmfresh-tech-4", name: "typeScript" },
     ],
-    liveUrl: "https://farmfresh.example.com",
+    liveUrl: "https://farmfresh.iarafathossain.me/",
     sourceCode: "https://github.com/iarafathossain/farmfresh",
     accentColor: "var(--primary)",
   },
