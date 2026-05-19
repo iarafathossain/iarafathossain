@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     }
 
     const { error } = await resend.emails.send({
-      from: "Arafat Hossain <arafat24official@gmail.com>",
+      from: "Arafat Hossain <contact@iarafathossain.me>",
       to: [process.env.PERSONAL_RECEIVER_EMAIL || "arafat24official@gmail.com"],
       replyTo: email,
       subject: `Portfolio Contact Form: ${subject}`,

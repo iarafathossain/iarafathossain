@@ -52,6 +52,8 @@ const ContactForm: React.FC = () => {
         body: JSON.stringify(formData),
       });
 
+      console.log("Form submission response:", await response.json());
+
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
