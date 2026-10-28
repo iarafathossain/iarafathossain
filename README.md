@@ -120,14 +120,14 @@ Deepening my skills in modern full-stack development with a focus on:
 
 ## 📜 Certifications
 
-| Certificate                        | Platform          | Preview                                                                                                                     |
-| ---------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Full Stack Web Development Level-2 | Programming Hero  | ![Cert](https://placehold.co/300x200?text=Certificate+Preview)                                                              |
-| AI Engineering Path                | Scrimba           | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422576/certificates/ai-engineering-path_ivyl8g.webp)         |
-| Advanced JavaScript                | Scrimba           | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422576/certificates/advanced-javascript_i4e8qs.webp)         |
-| Programming with JavaScript        | Coursera (Meta)   | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422580/certificates/programming-with-js-by-meta_qcvjff.webp) |
-| React & Next.js Mastery            | Learn With Sumith | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422577/certificates/reactive-accelaerator_nbknqh.webp)       |
-| UI/UX Engineering                  | Scrimba           | ![Cert](https://placehold.co/300x200?text=Certificate+Preview)                                                              |
+| Certificate                                        | Platform          | Preview                                                                                                                     |
+| -------------------------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Next Level AI-Driven Software Engineering Bootcamp | Programming Hero  | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1793182628/certificates/next-level-bootcamp_u0aabs.jpg)          |
+| AI Engineering Path                                | Scrimba           | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422576/certificates/ai-engineering-path_ivyl8g.webp)         |
+| Advanced JavaScript                                | Scrimba           | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422576/certificates/advanced-javascript_i4e8qs.webp)         |
+| Programming with JavaScript                        | Coursera (Meta)   | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422580/certificates/programming-with-js-by-meta_qcvjff.webp) |
+| React & Next.js Mastery                            | Learn With Sumith | ![Cert](https://res.cloudinary.com/dlswlzccr/image/upload/v1778422577/certificates/reactive-accelaerator_nbknqh.webp)       |
+| UI/UX Engineering                                  | Scrimba           | ![Cert](https://placehold.co/300x200?text=Certificate+Preview)                                                              |
 
 ---
 

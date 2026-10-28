@@ -1,7 +1,6 @@
 import {
   BootstrapIcon,
   CssIcon,
-  FigmaIcon,
   FirebaseIcon,
   FramerMotionIcon,
   GithubIcon,
@@ -11,14 +10,14 @@ import {
   NextJSIcon,
   NodeJSIcon,
   PgsqlIcon,
-  PostmanIcon,
   ReactIcon,
   SvgIcon,
   TailwindcssIcon,
   TypescriptIcon,
-  VsCodeIcon,
 } from "@/assets/svgs";
 import {
+  Bot,
+  Brain,
   Cloud,
   Container,
   Cpu,
@@ -31,6 +30,7 @@ import {
   Server,
   Shield,
   ShieldCheck,
+  Sparkles,
   TableProperties,
   Users,
   Workflow,
@@ -135,16 +135,17 @@ export const BENTO_CATEGORIES: IBentoCategory[] = [
     colSpan: "single",
   },
   {
-    title: "Tools & DevOps",
+    title: "DevOps",
     icon: <Workflow className="w-4 h-4" />,
     skills: [
-      { name: "Git & GitHub", icon: <GithubIcon className="w-4 h-4" /> },
-      { name: "Docker", icon: <Container className="w-4 h-4" /> },
+      {
+        name: "Docker, Docker Compose",
+        icon: <Container className="w-4 h-4" />,
+      },
       { name: "DNS & Domain Management", icon: <Server className="w-4 h-4" /> },
-      { name: "Vercel & Render", icon: <Cloud className="w-4 h-4" /> },
-      { name: "Postman", icon: <PostmanIcon className="w-4 h-4" /> },
-      { name: "VS Code", icon: <VsCodeIcon className="w-4 h-4" /> },
-      { name: "Figma", icon: <FigmaIcon className="w-4 h-4" /> },
+      { name: "AWS(S3, EC2)", icon: <Cloud className="w-4 h-4" /> },
+      { name: "Git & GitHub", icon: <GithubIcon className="w-4 h-4" /> },
+      { name: "CI/CD Pipelines", icon: <Workflow className="w-4 h-4" /> },
     ],
     colSpan: "single",
   },
@@ -152,12 +153,12 @@ export const BENTO_CATEGORIES: IBentoCategory[] = [
 
 export const EXPLORING_GROUPS: IExploringGroup[] = [
   {
-    groupTitle: "Cloud & DevOps",
-    icon: <Cloud className="w-4 h-4" />,
+    groupTitle: "AI Integration",
+    icon: <Bot className="w-4 h-4" />,
     skills: [
-      { name: "AWS", icon: <Cloud className="w-3 h-3" /> },
-      { name: "Docker", icon: <Container className="w-3 h-3" /> },
-      { name: "CI/CD Pipelines", icon: <Workflow className="w-3 h-3" /> },
+      { name: "LLM Integration", icon: <Brain className="w-3 h-3" /> },
+      { name: "AI SDKs & APIs", icon: <Bot className="w-3 h-3" /> },
+      { name: "Prompt Engineering", icon: <Sparkles className="w-3 h-3" /> },
     ],
   },
   {

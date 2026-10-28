@@ -1,6 +1,7 @@
 import {
   AdvancedJavascriptCertificate,
   AiEngineeringPathCertificate,
+  NextLevelAIDrivenSoftwareEngineeringBootcampCertificate,
   ProgrammingWithJsByMetaCertificate,
   ReactiveAccelaeratorCertificate,
 } from "@/assets/certifications";
@@ -23,6 +24,21 @@ export const ACADEMIC_EDUCATION: IAcademicEducation = {
 };
 
 export const CERTIFICATIONS: ICertification[] = [
+  {
+    id: "cert-0",
+    title: "Next Level AI-Driven Software Engineering Bootcamp",
+    platform: "Programming Hero",
+    platformColor: "var(--primary)",
+    completionDate: "2025",
+    imageUrl: NextLevelAIDrivenSoftwareEngineeringBootcampCertificate,
+    summary:
+      "Completed an advanced full-stack development program covering software engineering, scalable web development, databases, and AI integration.",
+    highlights: [
+      "Full-stack development with AI integration",
+      "Database design & Testing & software engineering",
+      "Cloud, DevOps & deployment",
+    ],
+  },
   {
     id: "cert-1",
     title: "Advanced JavaScript",

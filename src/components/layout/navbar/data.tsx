@@ -3,10 +3,10 @@ import { socialLinks } from "@/constants";
 import type { NavItem, SocialLink } from "./interface";
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Services", href: "/#services" },
+  { label: "Experience", href: "/#experiences" },
+  { label: "Testimonials", href: "/#testimonials" },
   { label: "Skills", href: "/#skills" },
   { label: "Projects", href: "/#projects" },
-  { label: "Education", href: "/#education" },
   { label: "Contact", href: "/#contact" },
   { label: "About", href: "/about" },
 ];
@@ -24,4 +24,5 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ];
 
-export const RESUME_HREF = "/resume.pdf";
+export const RESUME_HREF =
+  "https://drive.google.com/file/d/1UQZWfMMoJ7xxN2rTHMJy2Yffx2J_i2uU/view";

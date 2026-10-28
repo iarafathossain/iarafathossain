@@ -5,12 +5,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import SectionLabel from "../section-label";
+import DotBGEffect from "../shared/dot-bg-effect";
 import {
   SECTION_GSAP_BLOCK,
   SECTION_GSAP_HEADING,
 } from "../shared/section-animations";
 import SectionShell from "../shared/section-shell";
-import SquareBGEffect from "../shared/square-bg-effect";
 import BentoCard from "./bento-card";
 import CoreSkill from "./core-skill";
 import { BENTO_CATEGORIES, CORE_STACK } from "./data";
@@ -84,7 +84,7 @@ export default function SkillsSection() {
   }, []);
 
   return (
-    <SectionShell ref={sectionRef} id="skills" background={<SquareBGEffect />}>
+    <SectionShell ref={sectionRef} id="skills" background={<DotBGEffect />}>
       <div className="space-y-12">
         <SectionHeading
           ref={headingRef}

@@ -6,15 +6,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Heart, Star } from "lucide-react";
 import { useLayoutEffect, useRef } from "react";
-import DotBGEffect from "../shared/dot-bg-effect";
 import { SECTION_CARD_MOTION } from "../shared/section-animations";
 import SectionShell from "../shared/section-shell";
+import SquareBGEffect from "../shared/square-bg-effect";
 import { testimonials } from "./data";
 import TestimonialCard from "./testimonial-card";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function TestimonialsRedesign() {
+export default function TestimonialSection() {
   const componentRef = useRef<HTMLElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
@@ -48,7 +48,7 @@ export default function TestimonialsRedesign() {
       id="testimonials"
       background={
         <>
-          <DotBGEffect />
+          <SquareBGEffect />
           <div
             ref={backgroundRef}
             className="absolute inset-0 pointer-events-none z-0"
@@ -68,11 +68,11 @@ export default function TestimonialsRedesign() {
         <SectionHeading
           ref={headingRef}
           label="Trusted Feedback"
-          title=" Words From Clients"
-          description="A few words from clients and mentors across freelance work and mentorship."
+          title="Kind Words"
+          description="Feedback from founders and clients I've worked with, on the projects we built together."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {testimonials.map((data, index) => (
             <motion.div
               key={index}
@@ -83,7 +83,7 @@ export default function TestimonialsRedesign() {
                 delay: index * 0.12,
               }}
             >
-              <TestimonialCard data={data} />
+              <TestimonialCard testimonial={data} />
             </motion.div>
           ))}
         </div>
